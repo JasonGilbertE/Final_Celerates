@@ -1,0 +1,116 @@
+style>
+body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f9f9f9;
+     }
+     .header {
+         background-color: #c0392b;
+         color: white;
+         padding: 20px;
+         text-align: left;
+         font-size: 24px;
+     }
+     .header img {
+         vertical-align: middle;
+     }
+     .container {
+         padding: 20px;
+     }
+     .title {
+         font-size: 18px;
+         margin-bottom: 20px;
+     }
+     .content {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 20px;
+     }
+     .box {
+         background-color: white;
+         padding: 20px;
+         border: 1px solid #e0e0e0;
+         border-radius: 5px;
+         width: 48%;
+     }
+     .box h3 {
+         margin-top: 0;
+     }
+     .box table {
+         width: 100%;
+         border-collapse: collapse;
+     }
+     .box table td {
+         padding: 5px 0;
+     }
+     .box table td:first-child {
+         color: #888;
+     }
+     .box .highlight {
+         background-color: #f8d7da;
+         padding: 10px;
+         border-radius: 5px;
+     }
+     .box .highlight p {
+         margin: 0;
+     }
+     .payment-box {
+         text-align: center;
+     }
+     .payment-box .timer {
+         background-color: #d4edda;
+         padding: 10px;
+         border-radius: 5px;
+         margin-bottom: 20px;
+     }
+     .payment-box img {
+         width: 200px;
+         height: 200px;
+     }
+     .payment-box .total {
+         font-size: 18px;
+         margin: 20px 0;
+     }
+     .payment-box .btn {
+         background-color: #c0392b;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+     .footer {
+         background-color: #c0392b;
+         color: white;
+         padding: 20px;
+         text-align: center;
+     }
+     .footer .footer-content {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 20px;
+     }
+     .footer .footer-content div {
+         width: 30%;
+     }
+     .footer .footer-content h4 {
+         margin-top: 0;
+     }
+     .footer .footer-content ul {
+         list-style: none;
+         padding: 0;
+     }
+     .footer .footer-content ul li {
+         margin: 5px 0;
+     }
+     .footer .social-icons {
+         margin-top: 20px;
+     }
+     .footer .social-icons i {
+         margin: 0 10px;
+         cursor: pointer;
+     }
+     .footer .copyright {
+         font-size: 14px;
+     }
