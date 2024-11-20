@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,13 +9,13 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-2">Central Java</h3>
           <div className="social-icons flex gap-2">
             <a href="#" className="icon-circle bg-white text-black w-8 h-8 flex items-center justify-center rounded-full">
-            <i className="fab fa-xing"></i>
+              <i className="fab fa-xing"></i>
             </a>
             <a href="#" className="icon-circle bg-white text-black w-8 h-8 flex items-center justify-center rounded-full">
-            <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f"></i>
             </a>
             <a href="#" className="icon-circle bg-white text-black w-8 h-8 flex items-center justify-center rounded-full">
-            <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -22,27 +23,63 @@ const Footer = () => {
         <div className="footer-menu">
           <h4 className="text-sm font-bold mb-2">Menu Utama</h4>
           <ul>
-            <li><a href="#" className="text-sm hover:underline">Produk Terbaru</a></li>
-            <li><a href="#" className="text-sm hover:underline">Produk Terpopuler</a></li>
-            <li><a href="#" className="text-sm hover:underline">Ulasan Pelanggan</a></li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Produk Terbaru
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Produk Terpopuler
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Ulasan Pelanggan
+              </a>
+            </li>
           </ul>
         </div>
 
         <div className="footer-category">
           <h4 className="text-sm font-bold mb-2">Kategori</h4>
           <ul>
-            <li><a href="#" className="text-sm hover:underline">Pakaian</a></li>
-            <li><a href="#" className="text-sm hover:underline">Makanan</a></li>
-            <li><a href="#" className="text-sm hover:underline">Kerajinan</a></li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Pakaian
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Makanan
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Kerajinan
+              </a>
+            </li>
           </ul>
         </div>
 
         <div className="footer-settings">
           <h4 className="text-sm font-bold mb-2">Pengaturan</h4>
           <ul>
-            <li><a href="#" className="text-sm hover:underline">Pengaturan Akun</a></li>
-            <li><a href="#" className="text-sm hover:underline">Loyalitas Pelanggan</a></li>
-            <li><a href="#" className="text-sm hover:underline">Pusat Bantuan</a></li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Pengaturan Akun
+              </a>
+            </li>
+            <li>
+              <Link to="./loyalitas" className="text-sm hover:underline">
+                Loyalitas Pelanggan
+              </Link>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:underline">
+                Pusat Bantuan
+              </a>
+            </li>
           </ul>
         </div>
       </div>
