@@ -21,29 +21,31 @@ const FlashSaleCard = () => {
       }
     }, 1000);
 
-    return () => clearInterval(countdownTimer); // Cleanup interval saat komponen dibersihkan
+    return () => clearInterval(countdownTimer);
   }, []);
 
   return (
-    <div className="flash-sale-card text-center w-full">
-      <h2 className="text-2xl font-bold text-red-600 mb-4">Flash Sale</h2>
-      <p className="text-lg text-gray-700">Berakhir dalam</p>
-      <div className="countdown flex justify-center mt-2 space-x-2">
-        <span className="bg-pink-200 text-black font-bold px-4 py-2 rounded-md">
-          {String(timeLeft.hours).padStart(2, "0")}
-        </span>
-        <span className="text-xl">:</span>
-        <span className="bg-pink-200 text-black font-bold px-4 py-2 rounded-md">
-          {String(timeLeft.minutes).padStart(2, "0")}
-        </span>
-        <span className="text-xl">:</span>
-        <span className="bg-pink-200 text-black font-bold px-4 py-2 rounded-md">
-          {String(timeLeft.seconds).padStart(2, "0")}
-        </span>
+    <div className="flash-sale-card text-left ml-5 mt-20 w-full">
+      {/* Flash Sale Countdown */}
+      <div className="flex items-center space-x-4">
+        <h2 className="text-2xl font-bold text-black-600">Flash Sale</h2>
+        <div className="countdown-container flex items-center space-x-2">
+          <p className="text-lg text-gray-700">Berakhir dalam</p>
+          <div className="countdown flex items-center space-x-2">
+            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">
+              {String(timeLeft.hours).padStart(2, "0")}
+            </span>
+            <span className="text-xl">:</span>
+            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">
+              {String(timeLeft.minutes).padStart(2, "0")}
+            </span>
+            <span className="text-xl">:</span>
+            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">
+              {String(timeLeft.seconds).padStart(2, "0")}
+            </span>
+          </div>
+        </div>
       </div>
-      <button className="mt-4 bg-red-600 text-white px-6 py-2 rounded-md">
-        Beli Sekarang
-      </button>
     </div>
   );
 };
