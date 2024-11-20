@@ -1,0 +1,53 @@
+import React from "react";
+import { Link } from 'react-router-dom';
+import Footer from "../components/Footer";
+
+const Login = () => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className="bg-[#C62E2E] text-white p-4">
+        <div className="text-lg font-bold">
+          <p>CENTRAL</p>
+          <p className="ml-5 font-ribeye">JAVA</p>
+        </div>
+      </header>
+
+      {/* Content */}
+      <main className="flex-grow flex justify-center items-center py-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="bg-red-100 p-10 rounded-lg w-[350px] text-center">
+            <h2 className="text-xl font-semibold mb-4">Selamat Datang Kembali!</h2>
+            <p className="mb-6"> Belum punya akun?{" "}
+              <Link to="/Register" className="font-bold italic text-red-600 hover:underline">Daftar</Link>
+            </p>
+            <input type="text" placeholder="Masukkan email anda" className="w-full p-2 border-red-600 border rounded-[15px] mb-4"/>
+            <input type="password" placeholder="Masukkan sandi anda" className="w-full p-2 border-red-600 border rounded-[15px] mb-4" />
+            <a href="pwnew.html" className="block text-right text-sm text-black hover:underline"> Lupa Kata Sandi? </a>
+
+            <a href="user.html"className="block text-center bg-[#C62E2E] text-white py-2 rounded font-bold hover:bg-red-700 mt-4">Masuk</a>
+            <div className="mt-6 text-sm">atau masuk dengan</div>
+            <div className="flex items-center mt-6">
+                <span className="flex-grow h-[1px] bg-black"></span>           
+            <a href="googlelogin.html" className="mx-4" aria-label="Login with Google">
+                <img src="/assets/images/google-icon.png" alt="Google" className="w-8 h-8"/>
+            </a>           
+            <span className="flex-grow h-[1px] bg-black"></span>
+            </div>
+          </div>
+
+          {/* Welcome Section */}
+        <div className="text-center">
+          <img src="/assets/images/fotologin.png" alt="Foto Login" className="w-[300px] mb-4"/>
+          <h2 className="text-black mt-4 font-semibold">Masuk dan Mulai Belanja!</h2>
+          <p className="text-gray-600">Kami menghadirkan beragam produk unggulan</p>
+          <p className="text-gray-600">dari Jawa Tengah.</p>
+        </div>
+      </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Login;
