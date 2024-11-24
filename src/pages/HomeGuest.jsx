@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import DiscountCard from "../components/DiscountCard";
 import NewCard from "../components/NewCard";
@@ -8,10 +7,10 @@ import CustomerReviewCard from "../components/CustomerReviewCard";
 import BannerBwh from "../components/BannerBwh"; 
 import HeaderGuest from "../components/HeaderGuest";
 
-const Home = () => {
+const HomeGuest = () => {
   return (
     <div>
-      <Header />
+      <HeaderGuest />
 
       <main className="">
         <section className="main-content flex items-center bg-[#C62E2E] pb-8 mt-8 relative">
@@ -68,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeGuest;

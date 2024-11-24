@@ -24,7 +24,7 @@ const Header = () => {
       </div>
 
       <nav className="nav flex space-x-4 items-center ml-20">
-        <Link to="/" className="">Home</Link>
+        <Link to="/home" className="">Home</Link>
         <CategoryDropdown />
       </nav>
 

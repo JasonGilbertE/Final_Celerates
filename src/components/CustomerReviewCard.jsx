@@ -1,30 +1,71 @@
-// src/components/CustomerReviewCard.jsx
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules"; 
+import { Link } from "react-router-dom"; // Import Link untuk navigasi
+import ReviewData from "../services/ReviewData";
 
-const CustomerReviewCard = ({ reviewer, rating, review }) => {
+const CustomerReviewCard = () => {
   return (
-    <div className="review-card bg-white p-4 border border-gray-300 rounded-lg shadow-md w-full max-w-sm">
-      <div className="review-header flex items-center">
-        <div className="profile-img mr-4">
-          {/* Gambar profil reviewer (bisa diganti dengan avatar atau gambar) */}
-          <img src="https://via.placeholder.com/50" alt="Profile" className="w-12 h-12 rounded-full" />
-        </div>
-        <div className="review-info">
-          <h3 className="text-lg font-semibold">{reviewer}</h3>
-          <div className="rating flex items-center">
-            {/* Menampilkan rating menggunakan icon bintang */}
-            {Array.from({ length: 5 }).map((_, index) => (
-              <i
-                key={index}
-                className={`fas fa-star ${index < Math.floor(rating) ? "text-yellow-500" : "text-gray-300"}`}
-              />
-            ))}
-            <span className="ml-2 text-sm text-gray-600">{rating}</span>
-          </div>
-        </div>
+    <section className="customer-reviews pl-5 pr-8 mt-8">
+      {/* Header dengan Judul dan Link */}
+      <div className="popular-header flex justify-between items-center mb-4">
+        <h2 className="text-2xl font-bold text-left">Ulasan Pelanggan</h2>
+        <Link
+          to="/all-reviews" // Pastikan route ini sesuai dengan App.jsx
+          className="see-all text-sm font-bold text-[#000000] hover:text-red-800"
+        >
+          Lihat Semua &gt;
+        </Link>
       </div>
-      <p className="review-text mt-2 text-sm text-gray-700">{review}</p>
-    </div>
+
+      {/* Swiper Slider untuk Review */}
+      <Swiper
+        modules={[Pagination]} 
+        spaceBetween={20}
+        slidesPerView={1} 
+        loop={false}
+        pagination={false} 
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="pb-16"
+      >
+        {ReviewData.map((review, index) => (
+          <SwiperSlide key={index}>
+            <div className="review-card bg-white p-4 shadow-md rounded-lg border-4 border-red-500 h-auto min-h-[250px] flex flex-col justify-between">
+              <div>
+                {/* Header Card Review */}
+                <div className="flex justify-between items-center mb-4">
+                  <div className="flex items-center">
+                    <img
+                      src={review.profileImage}
+                      alt={`${review.reviewer} profile`}
+                      className="w-12 h-12 rounded-full mr-4 border border-gray-300"
+                    />
+                    <div>
+                      <h3 className="text-lg font-semibold">{review.reviewer}</h3>
+                      <div className="text-yellow-500">
+                        {"⭐".repeat(Math.floor(review.rating))}{" "}
+                        {review.rating % 1 !== 0 ? "⭐" : ""}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 text-xl font-semibold">
+                    {review.rating}
+                  </p>
+                </div>
+                {/* Isi Review */}
+                <p className="text-gray-600">{review.review}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 };
 
