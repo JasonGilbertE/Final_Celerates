@@ -6,7 +6,6 @@ import NewCard from "../components/NewCard";
 import PopularCard from "../components/PopularCard";
 import CustomerReviewCard from "../components/CustomerReviewCard";
 import BannerBwh from "../components/BannerBwh"; 
-import HeaderGuest from "../components/HeaderGuest";
 
 const Home = () => {
   return (
@@ -44,7 +43,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="discount-products mb-8">
+        <section className="discount-products ">
           <DiscountCard />
         </section>
 

@@ -61,7 +61,6 @@ const Rating = () => {
 
       <main className="flex-grow container mt-14 ml-8 py-8">
         <h1 className="text-3xl font-semibold text-left my-4 border-b border-gray-300 pb-4 flex items-center">
-          {/* Star Icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -79,10 +78,8 @@ const Rating = () => {
           Ulasan Pelanggan
         </h1>
 
-        {/* Form Tambah Ulasan (Tampil di atas halaman) */}
         {isFormVisible && (
           <div className="mt-8 bg-gray-100 p-6 px-8 rounded-lg shadow-md max-w-full mx-auto mb-8 border border-gray-300 relative">
-            {/* Tombol X untuk menutup form */}
             <button
               className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-800"
               onClick={() => setIsFormVisible(false)}
@@ -146,20 +143,18 @@ const Rating = () => {
           </div>
         )}
 
-        {/* Section untuk ulasan */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
             <RatingCard key={index} review={review} />
           ))}
         </div>
 
-        {/* Tombol Tambah Ulasan (Tetap di bawah halaman) */}
         <div className="flex justify-center mt-8">
           <button
             className="bg-[#C62E2E] text-white font-semibold py-2 px-4 rounded-md w-[285px] h-[40px] hover:bg-red-600 transition-colors"
             onClick={() => {
               setIsFormVisible(true);
-              window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll ke atas saat form ditampilkan
+              window.scrollTo({ top: 0, behavior: "smooth" }); 
             }}
           >
             Tambah Ulasan

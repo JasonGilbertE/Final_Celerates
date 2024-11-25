@@ -25,4 +25,4 @@ const RatingCard = ({ review }) => {
   );
 };
 
-export default RatingCard; // RatingCard diekspor di sini
+export default RatingCard; 

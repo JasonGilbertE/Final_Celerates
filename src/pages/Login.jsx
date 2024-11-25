@@ -11,10 +11,17 @@ const Login = () => {
   const handleLogin = (event) => {
     event.preventDefault();
 
-    // Check credentials
+    // Cek login untuk User
     if (email === "user@gmail.com" && password === "12345") {
-      console.log("Login successful");
-      navigate("/home"); 
+      localStorage.setItem("role", "user");  // Menyimpan role user di localStorage
+      console.log("Login successful as user");
+      navigate("/home");  // Redirect ke halaman user
+    } 
+    // Cek login untuk Admin
+    else if (email === "admin@gmail.com" && password === "admin123") {
+      localStorage.setItem("role", "admin");  // Menyimpan role admin di localStorage
+      console.log("Login successful as admin");
+      navigate("/admin/dashboard");  // Redirect ke halaman admin
     } else {
       alert("Invalid email or password");
     }
@@ -54,7 +61,7 @@ const Login = () => {
                 className="w-full p-2 border-red-600 border rounded-[15px] mb-4"
                 required
               />
-              <a href="pwnew.html" className="block text-right text-sm text-black hover:underline"> Lupa Kata Sandi? </a>
+              <Link to="/forgot-password" className="block text-right text-sm text-black hover:underline">Lupa Kata Sandi?</Link>
 
               <button
                 type="submit" 
