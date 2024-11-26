@@ -29,8 +29,7 @@ const VerificationCode = () => {
         <div className="bg-red-100 p-8 rounded-lg w-[600px] shadow-lg relative">
           <button
             onClick={() => navigate("/forgot-password")}
-            className="absolute top-4 left-4 text-[#C62E2E] hover:text-red-700"
-          >
+            className="absolute top-4 left-4 text-[#C62E2E] hover:text-red-700" >
             <IoArrowBackSharp size={24} />
           </button>
 
@@ -45,12 +44,10 @@ const VerificationCode = () => {
               value={verificationCode}
               onChange={(e) => setVerificationCode(e.target.value)}
               className="w-full p-2 border border-red-600 rounded-[15px] mb-4"
-              required
-            />
+              required/>
             <button
               type="submit"
-              className="w-full bg-[#C62E2E] text-white py-2 rounded font-bold hover:bg-red-700"
-            >
+              className="w-full bg-[#C62E2E] text-white py-2 rounded font-bold hover:bg-red-700" >
               Lanjut
             </button>
           </form>

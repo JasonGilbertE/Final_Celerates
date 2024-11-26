@@ -53,20 +53,16 @@ const DiscountCard = () => {
         spaceBetween={10}
         slidesPerView={4}
         loop={false}
-        autoplay={{ delay: 2500 }}
-      >
+        autoplay={{ delay: 2500 }}>
         {DiscountData.map((product, index) => (
           <SwiperSlide key={index}>
             <div
               className="product-cardrek bg-[#f9f9f9] border-4 border-[#C62E2E] ml-5 mr-5 rounded-lg shadow-md w-[300px] h-[465px] flex flex-col"
-              style={{ minWidth: "300px", minHeight: "465px" }}
-            >
-              {/* Gambar Produk */}
+              style={{ minWidth: "300px", minHeight: "465px" }} >
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-[270px] object-cover rounded-t-lg"
-              />
+                className="w-full h-[270px] object-cover rounded-t-lg" />
 
               <div className="product-infos p-4 flex flex-col justify-between h-[195px]">
                 <div className="rating-lama flex items-center mb-4 mt-5 text-base">

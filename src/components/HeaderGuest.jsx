@@ -17,14 +17,12 @@ const HeaderGuest = () => {
 
   return (
     <header className="bg-[#C62E2E] text-white p-4 flex justify-between items-center fixed top-0 w-full z-10 border-b-2 border-gray-300">
-      {/* Logo */}
       <div className="text-xl font-bold font-ribeye text-center">
         <span>CENTRAL</span>
         <br />
         <span>JAVA</span>
       </div>
 
-      {/* Navigation */}
       <nav className="flex items-center space-x-6">
         <Link to="/" className="hover:text-gray-200 transition">
           Beranda
@@ -32,7 +30,6 @@ const HeaderGuest = () => {
         <CategoryDropdown /> 
       </nav>
 
-      {/* Search Bar */}
       <div className="flex items-center bg-white rounded-full px-3 py-1 w-full max-w-xl mx-4">
         <button
           onClick={handleSearchSubmit}
@@ -49,7 +46,6 @@ const HeaderGuest = () => {
         />
       </div>
 
-      {/* Auth Buttons */}
       <nav className="flex space-x-4">
         <Link
           to="/login"

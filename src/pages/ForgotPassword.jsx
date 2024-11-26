@@ -20,7 +20,6 @@ const ForgotPassword = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
       <header className="bg-[#C62E2E] text-white p-4">
         <div className="text-lg font-bold">
           <p>CENTRAL</p>
@@ -28,7 +27,6 @@ const ForgotPassword = () => {
         </div>
       </header>
 
-      {/* Konten Utama */}
       <main className="flex-grow flex justify-center items-center py-10">
         <div
           className="bg-red-100 p-8 rounded-lg w-[851px] shadow-lg relative"

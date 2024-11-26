@@ -11,17 +11,16 @@ const Login = () => {
   const handleLogin = (event) => {
     event.preventDefault();
 
-    // Cek login untuk User
     if (email === "user@gmail.com" && password === "12345") {
-      localStorage.setItem("role", "user");  // Menyimpan role user di localStorage
+      localStorage.setItem("role", "user");  
       console.log("Login successful as user");
-      navigate("/home");  // Redirect ke halaman user
+      navigate("/home");  
     } 
-    // Cek login untuk Admin
+
     else if (email === "admin@gmail.com" && password === "admin123") {
-      localStorage.setItem("role", "admin");  // Menyimpan role admin di localStorage
+      localStorage.setItem("role", "admin"); 
       console.log("Login successful as admin");
-      navigate("/admin/dashboard");  // Redirect ke halaman admin
+      navigate("/admin/dashboard"); 
     } else {
       alert("Invalid email or password");
     }
@@ -51,22 +50,19 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full p-2 border-red-600 border rounded-[15px] mb-4"
-                required
-              />
+                required/>
               <input
                 type="password"
                 placeholder="Masukkan sandi anda"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full p-2 border-red-600 border rounded-[15px] mb-4"
-                required
-              />
+                required/>
               <Link to="/forgot-password" className="block text-right text-sm text-black hover:underline">Lupa Kata Sandi?</Link>
 
               <button
                 type="submit" 
-                className="w-full text-center bg-[#C62E2E] text-white py-2 rounded font-bold hover:bg-red-700 mt-4"
-              >
+                className="w-full text-center bg-[#C62E2E] text-white py-2 rounded font-bold hover:bg-red-700 mt-4">
                 Masuk
               </button>
             </form>

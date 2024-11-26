@@ -21,33 +21,25 @@ function NewCard() {
           <li
             onClick={() => handleTabClick("popular")}
             className={`tab-item text-center cursor-pointer ${
-              activeTab === "popular" ? "text-black border-b-2 border-black" : "text-gray-400"
-            }`}
-          >
+              activeTab === "popular" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Popular
           </li>
           <li
             onClick={() => handleTabClick("pakaian")}
             className={`tab-item text-center cursor-pointer ${
-              activeTab === "pakaian" ? "text-black border-b-2 border-black" : "text-gray-400"
-            }`}
-          >
+              activeTab === "pakaian" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Pakaian
           </li>
           <li
             onClick={() => handleTabClick("makanan")}
             className={`tab-item text-center cursor-pointer ${
-              activeTab === "makanan" ? "text-black border-b-2 border-black" : "text-gray-400"
-            }`}
-          >
+              activeTab === "makanan" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Makanan
           </li>
           <li
             onClick={() => handleTabClick("kerajinan")}
             className={`tab-item text-center cursor-pointer ${
-              activeTab === "kerajinan" ? "text-black border-b-2 border-black" : "text-gray-400"
-            }`}
-          >
+              activeTab === "kerajinan" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Kerajinan
           </li>
         </ul>

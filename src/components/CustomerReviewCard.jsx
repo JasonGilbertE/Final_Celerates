@@ -3,24 +3,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules"; 
-import { Link } from "react-router-dom"; // Import Link untuk navigasi
+import { Link } from "react-router-dom"; 
 import ReviewData from "../services/ReviewData";
 
 const CustomerReviewCard = () => {
   return (
     <section className="customer-reviews pl-5 pr-8 mt-8">
-      {/* Header dengan Judul dan Link */}
       <div className="popular-header flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-left">Ulasan Pelanggan</h2>
         <Link
-          to="/all-reviews" // Pastikan route ini sesuai dengan App.jsx
-          className="see-all text-sm font-bold text-[#000000] hover:text-red-800"
-        >
+          to="/all-reviews" 
+          className="see-all text-sm font-bold text-[#000000] hover:text-red-800" >
           Lihat Semua &gt;
         </Link>
       </div>
 
-      {/* Swiper Slider untuk Review */}
       <Swiper
         modules={[Pagination]} 
         spaceBetween={20}
@@ -38,7 +35,6 @@ const CustomerReviewCard = () => {
           <SwiperSlide key={index}>
             <div className="review-card bg-white p-4 shadow-md rounded-lg border-4 border-red-500 h-auto min-h-[250px] flex flex-col justify-between">
               <div>
-                {/* Header Card Review */}
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center">
                     <img
@@ -58,7 +54,6 @@ const CustomerReviewCard = () => {
                     {review.rating}
                   </p>
                 </div>
-                {/* Isi Review */}
                 <p className="text-gray-600">{review.review}</p>
               </div>
             </div>

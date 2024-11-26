@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiSearch } from 'react-icons/fi'; // Icon search
-import { FaCaretDown } from 'react-icons/fa'; // Icon dropdown
+import { FiSearch } from 'react-icons/fi'; 
+import { FaCaretDown } from 'react-icons/fa'; 
 
 const AdminHeader = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State untuk dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
   const navigate = useNavigate();
-  const dropdownRef = useRef(null); // Referensi untuk dropdown
+  const dropdownRef = useRef(null);
 
-  // Fungsi untuk logout
   const handleLogout = () => {
-    navigate('/login'); // Arahkan ke halaman login
+    navigate('/login'); 
   };
 
-  // Menutup dropdown saat pengguna mengklik di luar dropdown
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -34,9 +32,8 @@ const AdminHeader = () => {
         <span>JAVA</span>
       </div>
 
-      {/* Search Bar */}
       <div className="flex items-center space-x-4">
-        <div className="relative w-80"> {/* Ukuran diperbesar */}
+        <div className="relative w-80"> 
           <input
             type="text"
             placeholder="Cari Produk..."
@@ -45,7 +42,6 @@ const AdminHeader = () => {
           <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
         </div>
 
-        {/* Admin Dropdown */}
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}

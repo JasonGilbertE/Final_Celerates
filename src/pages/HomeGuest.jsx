@@ -4,7 +4,7 @@ import DiscountCard from "../components/DiscountCard";
 import NewCard from "../components/NewCard";
 import PopularCard from "../components/PopularCard";
 import CustomerReviewCard from "../components/CustomerReviewCard";
-import BannerBwh from "../components/BannerBwh"; 
+import BannerBwh from "../components/BannerBwh";
 import HeaderGuest from "../components/HeaderGuest";
 
 const HomeGuest = () => {
@@ -16,13 +16,12 @@ const HomeGuest = () => {
         <section className="main-content flex items-center bg-[#C62E2E] pb-8 mt-8 relative">
           <div className="welcome-text max-w-1/2">
             <h1 className="text-3xl text-white ml-8 mb-4">
-              SELAMAT DATANG DI <p> CENTRAL JAVA!</p>
+              SELAMAT DATANG DI <span className="font-bold">CENTRAL JAVA!</span>
             </h1>
             <p className="text-white ml-8 mb-4">
-              Temukan keunikan produk khas Jawa Tengah, dari batik, kerajinan{" "}
-              <p>tangan, hingga makanan tradisional. Setiap produk membawa keaslian </p>
-              <p>budaya dan kualitas terbaik dari pengrajin lokal. Dukung produk lokal,</p>
-              rasakan autentiknya Jawa Tengah!
+              Temukan keunikan produk khas Jawa Tengah, dari batik, kerajinan tangan, hingga makanan tradisional. 
+              Setiap produk membawa keaslian budaya dan kualitas terbaik dari pengrajin lokal. 
+              Dukung produk lokal, rasakan autentiknya Jawa Tengah!
             </p>
             <button className="shop-button bg-[#f4b5b5] text-black ml-8 py-2 px-4 rounded">
               Belanja Sekarang

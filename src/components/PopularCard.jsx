@@ -11,7 +11,6 @@ function PopularCard() {
         </a>
       </div>
       <div className="popular-content flex gap-8">
-        {/* Sidebar Kategori */}
         <div className="sidebar w-64 flex flex-col items-center">
           <div className="category-sidebar w-full">
             <button className="category-button active text-[#F53E32] text-left font-bold bg-red-100 p-2 rounded-md mb-2 w-full">
@@ -39,8 +38,7 @@ function PopularCard() {
           {popularData.map((product) => (
             <div
               key={product.id}
-              className="card-populer bg-white border-4 border-red-600 rounded-lg shadow-lg overflow-hidden relative"
-            >
+              className="card-populer bg-white border-4 border-red-600 rounded-lg shadow-lg overflow-hidden relative">
               <span className="label absolute top-2 left-2 bg-red-600 text-white text-xs py-1 px-2 rounded-lg">
                 TERBARU
               </span>
@@ -48,8 +46,8 @@ function PopularCard() {
                 src={product.image}
                 alt={product.description}
                 className="w-full h-48 object-cover rounded-t-lg"
-                style={{ height: "270px" }} 
-              />
+                style={{ height: "270px" }}/>
+                
               <div className="card-body p-4 flex flex-col justify-between h-56">
                 <div className="rating flex items-center mt-7 text-yellow-400 mb-9">
                   {"⭐".repeat(product.rating)}

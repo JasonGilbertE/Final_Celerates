@@ -2,9 +2,8 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children, admin }) => {
-  const role = localStorage.getItem("role"); // Ambil role dari localStorage
+  const role = localStorage.getItem("role"); 
 
-  // Jika role tidak sesuai, arahkan ke halaman login
   if (admin && role !== "admin") {
     return <Navigate to="/admin/login" />;
   }
@@ -13,7 +12,6 @@ const PrivateRoute = ({ children, admin }) => {
     return <Navigate to="/login" />;
   }
 
-  // Jika sesuai, render children
   return children;
 };
 

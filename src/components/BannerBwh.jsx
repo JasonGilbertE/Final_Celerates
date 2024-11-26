@@ -15,6 +15,7 @@ const BannerBwh = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         className="rounded-lg">
+          
         {/* Slide pertama */}
         <SwiperSlide>
           <img
@@ -23,6 +24,7 @@ const BannerBwh = () => {
             className="w-full h-[400px] block rounded-2xl"
           />
         </SwiperSlide>
+
         {/* Slide kedua */}
         <SwiperSlide>
           <img
@@ -31,6 +33,7 @@ const BannerBwh = () => {
             className="w-full h-[400px] block rounded-2xl"
           />
         </SwiperSlide>
+
         {/* Slide ketiga */}
         <SwiperSlide>
           <img

@@ -36,7 +36,6 @@ const NewPassword = () => {
 
       <main className="flex-grow flex justify-center items-center py-10">
         <div className="bg-red-100 p-8 rounded-lg w-[600px] shadow-lg relative">
-          {/* Icon Back */}
           <button
             onClick={() => navigate("/verification-code")}
             className="absolute top-4 left-4 text-[#C62E2E] hover:text-red-700"
