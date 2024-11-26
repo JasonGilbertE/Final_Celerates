@@ -1,20 +1,26 @@
 import React from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'; 
 import AdminHeader from '../components/AdminHeader';
 import AdminFooter from '../components/AdminFooter';
 import Sidebar from '../components/Sidebar';
-import TopCard from '../components/TopCard'; 
+import TopCard from '../components/TopCard';
 
 const AdminDashboard = () => {
-  const [dateRange, setDateRange] = React.useState([null, null]);
-  const [startDate, endDate] = dateRange;
+  const currentDate = new Date();
+
+  const currentFullDate = currentDate.toLocaleDateString('id-ID', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  const currentMonthYear = `${currentDate.toLocaleString('default', { month: 'long' })} ${currentDate.getFullYear()}`;
 
   const cardData = [
-    { title: "Total Penjualan", value: "Rp. 2,234,000", date: "Bulan Oktober 2024" },
-    { title: "Pesanan dalam proses", value: "7", date: "Bulan Oktober 2024" },
-    { title: "Pesanan selesai", value: "10", date: "Bulan Oktober 2024" },
-    { title: "Pengembalian", value: "2", date: "Bulan Oktober 2024" }
+    { title: "Total Penjualan", value: "Rp. 2,234,000", date: currentMonthYear },
+    { title: "Pesanan dalam proses", value: "7", date: currentMonthYear },
+    { title: "Pesanan selesai", value: "10", date: currentMonthYear },
+    { title: "Pengembalian", value: "2", date: currentMonthYear }
   ];
 
   return (
@@ -27,19 +33,7 @@ const AdminDashboard = () => {
 
           <div className="w-3/4">
             <div className="flex justify-end items-center mb-6">
-              <div className="flex items-center space-x-2">
-                <i className="fas fa-calendar-alt text-gray-500"></i>
-                <DatePicker
-                  selected={startDate}
-                  onChange={(update) => setDateRange(update)}
-                  startDate={startDate}
-                  endDate={endDate}
-                  selectsRange
-                  dateFormat="MMM dd, yyyy"
-                  placeholderText="Pilih rentang tanggal"
-                  className="border border-gray-300 rounded px-2 py-1 text-gray-600 text-sm"
-                />
-              </div>
+              <h3 className="text-lg font-bold text-gray-700">Tanggal: {currentFullDate}</h3>
             </div>
 
             <hr className="border-gray-300 mb-6" />

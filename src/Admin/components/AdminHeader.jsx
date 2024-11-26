@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import { FiSearch } from 'react-icons/fi'; 
 import { FaCaretDown } from 'react-icons/fa'; 
 
 const AdminHeader = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const dropdownRef = useRef(null);
 
   const handleLogout = () => {
     navigate('/login'); 
+  };
+
+  const handleLogoClick = () => {
+    navigate('/admin/dashboard'); 
   };
 
   useEffect(() => {
@@ -27,7 +31,10 @@ const AdminHeader = () => {
 
   return (
     <header className="bg-[#C62E2E] text-white p-4 flex justify-between items-center fixed top-0 w-full z-10 border-b-2 border-gray-300">
-      <div className="logo text-xl font-bold font-ribeye flex-shrink-0 pl-5 flex flex-col justify-center items-center">
+      <div
+        className="logo text-xl font-bold font-ribeye flex-shrink-0 pl-5 flex flex-col justify-center items-center cursor-pointer"
+        onClick={handleLogoClick} 
+      >
         <span>CENTRAL</span>
         <span>JAVA</span>
       </div>

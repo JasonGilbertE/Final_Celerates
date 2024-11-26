@@ -6,12 +6,12 @@ const Sidebar = () => {
     <div className="w-1/4 pt-14 pr-4">
       <div className="space-y-4">
         <div className="bg-[#F7CDCF] p-4 shadow">
-          <h3 className="font-bold text-black">LIST PESANAN</h3>
+          <h3 className="font-bold text-black border-b border-[#C62E2E] pb-2">LIST PESANAN</h3>
           <ul className="mt-2 space-y-2">
             <li>
               <Link
                 to="/admin/riwayat-pesanan"
-                className="text-gray-700 hover:text-black"
+                className="text-black hover:text-black"
               >
                 Riwayat Pesanan
               </Link>
@@ -19,7 +19,7 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/admin/proses-pesanan"
-                className="text-gray-700 hover:text-black"
+                className="text-black hover:text-black"
               >
                 Pesanan dalam proses
               </Link>
@@ -27,7 +27,7 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/admin/done-pesanan"
-                className="text-gray-700 hover:text-black"
+                className="text-black hover:text-black"
               >
                 Pesanan selesai
               </Link>
@@ -35,7 +35,7 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/admin/batal-pesanan"
-                className="text-gray-700 hover:text-black"
+                className="text-black hover:text-black"
               >
                 Pembatalan produk
               </Link>
@@ -43,7 +43,7 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/admin/return-pesanan"
-                className="text-gray-700 hover:text-black"
+                className="text-black hover:text-black"
               >
                 Pengembalian produk
               </Link>
@@ -51,25 +51,74 @@ const Sidebar = () => {
           </ul>
         </div>
         <div className="bg-[#F7CDCF] p-4 shadow">
-          <h3 className="font-bold text-black">PRODUK</h3>
+          <h3 className="font-bold text-black border-b border-[#C62E2E] pb-2">PRODUK</h3>
           <ul className="mt-2 space-y-2">
-            <li className="text-gray-700">Semua produk</li>
-            <li className="text-gray-700">Tambah produk</li>
-            <li className="text-gray-700">Atur produk flash sale</li>
+            <li>
+              <Link
+                to="/admin/semua-produk"
+                className="text-black hover:text-black"
+              >
+                Semua produk
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/tambah-produk" 
+                className="text-black hover:text-black"
+              >
+                Tambah produk
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/flash-sale"
+                className="text-black hover:text-black"
+              >
+                Atur produk flash sale
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="bg-[#F7CDCF] p-4 shadow">
-          <h3 className="font-bold text-black">KATEGORI PRODUK</h3>
+          <h3 className="font-bold text-black border-b border-[#C62E2E] pb-2">KATEGORI PRODUK</h3>
           <ul className="mt-2 space-y-2">
-            <li className="text-gray-700">Pakaian</li>
-            <li className="text-gray-700">Makanan</li>
-            <li className="text-gray-700">Kerajinan</li>
+            <li>
+              <Link
+                to="/admin/pakaian"
+                className="text-black hover:text-black"
+              >
+                Pakaian
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/makanan"
+                className="text-black hover:text-black"
+              >
+                Makanan
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/kerajinan"
+                className="text-black hover:text-black"
+              >
+                Kerajinan
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="bg-[#F7CDCF] p-4 shadow">
-          <h3 className="font-bold text-black">ULASAN PELANGGAN</h3>
+          <h3 className="font-bold text-black border-b border-[#C62E2E] pb-2">ULASAN PELANGGAN</h3>
           <ul className="mt-2 space-y-2">
-            <li className="text-gray-700">Penilaian Pelanggan</li>
+            <li>
+              <Link
+                to="/admin/ulasan-pelanggan"
+                className="text-black hover:text-black"
+              >
+                Penilaian Pelanggan
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -16,7 +16,6 @@ const RiwayatPesanan = () => {
   const pesananSelesai = riwayatData.filter(data => data.status === "Selesai").length;
   const pesananDibatalkan = riwayatData.filter(data => data.status === "Dibatalkan").length;
 
-  // Data untuk kartu
   const cardData = [
     { title: "Total Penjualan", value: `Rp ${totalPenjualan.toLocaleString()}`, date: "Oktober 2024" },
     { title: "Pesanan Dalam Proses", value: pesananProses, date: "Oktober 2024" },
