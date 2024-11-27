@@ -57,7 +57,7 @@ export const ADataKerajinan = [
   },
   {
     id: 9,
-    name: 'Hiasan dinding berbahan kayu dengan ukiran tradisional yang memukau.',
+    name: 'Hiasan dinding',
     description: 'Batik dengan motif klasik yang memberikan kesan elegan dan tradisional.',
     price: '150000',
     image: '/assets/images/alukisan.png',

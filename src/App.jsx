@@ -19,6 +19,7 @@ import ProsesProduk from "./Admin/pages/ProsesProduk";
 import UlasanAdmin from './Admin/pages/UlasanAdmin';  
 import TambahProduk from './Admin/pages/TambahProduk'; 
 import AdminFlashSale from './Admin/pages/AdminFlashSale'; 
+import SemuaProduk from './Admin/pages/SemuaProduk';
 
 import AdminPakaian from './Admin/pages/AdminPakaian';  
 import AdminMakanan from './Admin/pages/AdminMakanan';  
@@ -164,6 +165,17 @@ const App = () => {
             </PrivateRoute>
           }
         />
+
+<Route
+  path="/admin/semua-produk"
+  element={
+    <PrivateRoute admin={true}>
+      <main>
+        <SemuaProduk />
+      </main>
+    </PrivateRoute>
+  }
+/>
 
         <Route
           path="/admin/flash-sale"

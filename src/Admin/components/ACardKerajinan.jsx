@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 const ACardKerajinan = ({ product, onDelete }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -22,10 +22,10 @@ const ACardKerajinan = ({ product, onDelete }) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -39,7 +39,9 @@ const ACardKerajinan = ({ product, onDelete }) => {
 
       <div className="p-4 text-left">
         <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
-        <p className="text-[#C62E2E] font-bold">Rp. {product.price.toLocaleString()}</p>
+        <p className="text-[#C62E2E] font-bold">
+          Rp. {product.price ? product.price.toLocaleString() : "Harga tidak tersedia"}
+        </p>
       </div>
 
       <div className="absolute top-4 right-4">
