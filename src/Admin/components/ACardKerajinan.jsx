@@ -33,7 +33,7 @@ const ACardKerajinan = ({ product, onDelete }) => {
   }, []);
 
   const handleEdit = () => {
-    navigate(`/admin/edit-produk/${product.id}`); // Arahkan ke halaman EditProduk
+    navigate(`/admin/edit-produk/${product.id}`); 
   };
 
   return (

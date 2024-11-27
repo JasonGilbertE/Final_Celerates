@@ -15,15 +15,16 @@ import RiwayatPesanan from "./Admin/pages/RiwayatPesanan";
 import DoneProduk from "./Admin/pages/DoneProduk";
 import CancelProduk from "./Admin/pages/CancelProduk";
 import ReturnProduk from "./Admin/pages/ReturnProduk";
-import ProsesProduk from "./Admin/pages/ProsesProduk"; 
-import UlasanAdmin from './Admin/pages/UlasanAdmin';  
-import TambahProduk from './Admin/pages/TambahProduk'; 
-import AdminFlashSale from './Admin/pages/AdminFlashSale'; 
+import ProsesProduk from "./Admin/pages/ProsesProduk";
+import UlasanAdmin from './Admin/pages/UlasanAdmin';
+import TambahProduk from './Admin/pages/TambahProduk';
+import AdminFlashSale from './Admin/pages/AdminFlashSale';
 import SemuaProduk from './Admin/pages/SemuaProduk';
 
-import AdminPakaian from './Admin/pages/AdminPakaian';  
-import AdminMakanan from './Admin/pages/AdminMakanan';  
-import AdminKerajinan from './Admin/pages/AdminKerajinan';  
+import AdminPakaian from './Admin/pages/AdminPakaian';
+import AdminMakanan from './Admin/pages/AdminMakanan';
+import AdminKerajinan from './Admin/pages/AdminKerajinan';
+import DetailPembeli from './Admin/pages/DetailPembeli';
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -70,6 +71,16 @@ const App = () => {
             <PrivateRoute admin={true}>
               <main>
                 <RiwayatPesanan />
+              </main>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/detail-pembeli/:customerId"
+          element={
+            <PrivateRoute admin={true}>
+              <main>
+                <DetailPembeli />
               </main>
             </PrivateRoute>
           }
@@ -129,12 +140,11 @@ const App = () => {
           element={
             <PrivateRoute admin={true}>
               <main>
-                <TambahProduk /> 
+                <TambahProduk />
               </main>
             </PrivateRoute>
           }
         />
-
         <Route
           path="/admin/pakaian"
           element={
@@ -165,24 +175,22 @@ const App = () => {
             </PrivateRoute>
           }
         />
-
-<Route
-  path="/admin/semua-produk"
-  element={
-    <PrivateRoute admin={true}>
-      <main>
-        <SemuaProduk />
-      </main>
-    </PrivateRoute>
-  }
-/>
-
+        <Route
+          path="/admin/semua-produk"
+          element={
+            <PrivateRoute admin={true}>
+              <main>
+                <SemuaProduk />
+              </main>
+            </PrivateRoute>
+          }
+        />
         <Route
           path="/admin/flash-sale"
           element={
             <PrivateRoute admin={true}>
               <main>
-                <AdminFlashSale /> 
+                <AdminFlashSale />
               </main>
             </PrivateRoute>
           }

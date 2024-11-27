@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import AdminHeader from "../components/AdminHeader";
 import AdminFooter from "../components/AdminFooter";
 import Sidebar from "../components/Sidebar";
 import riwayatData from "../services/RiwayatData";
 import TopCard from "../components/TopCard";
-import DatePicker from "react-datepicker"; 
-import "react-datepicker/dist/react-datepicker.css"; 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const RiwayatPesanan = () => {
+  const navigate = useNavigate();
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
@@ -28,8 +30,12 @@ const RiwayatPesanan = () => {
     if (startDate && endDate) {
       return dataDate >= startDate && dataDate <= endDate;
     }
-    return true; 
+    return true;
   });
+
+  const handleUserClick = (customerId) => {
+    navigate(`/admin/detail-pembeli/${customerId}`);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -43,7 +49,7 @@ const RiwayatPesanan = () => {
             <div className="mb-4 flex justify-between items-center">
               <div className="flex items-center space-x-4">
                 <h2 className="text-2xl font-bold">Riwayat Pesanan</h2>
-              </div> 
+              </div>
 
               <div className="flex items-center space-x-4">
                 <DatePicker
@@ -95,9 +101,13 @@ const RiwayatPesanan = () => {
                       <td className="border-b py-2 px-4">{data.produk}</td>
                       <td className="border-b py-2 px-4">{data.idPesanan}</td>
                       <td className="border-b py-2 px-4">{data.tanggal}</td>
-                      <td className="border-b py-2 px-4">{data.namaUser}</td>
                       <td
-                        className={`border-b py-2 px-4 ${data.status === "Proses" ? "text-yellow-500" : data.status === "Dibatalkan" ? "text-red-500" : "text-green-500"}`}>
+                        className="border-b py-2 px-4 text-blue-500 cursor-pointer"
+                        onClick={() => handleUserClick(data.idUser)} >
+                        {data.namaUser}
+                      </td>
+                      <td
+                        className={`border-b py-2 px-4 ${data.status === "Proses" ? "text-yellow-500" : data.status === "Dibatalkan" ? "text-red-500" : "text-green-500"}`} >
                         {data.status}
                       </td>
                       <td className="border-b py-2 px-4 text-right">
