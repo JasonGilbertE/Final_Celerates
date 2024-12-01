@@ -18,28 +18,16 @@ function NewCard() {
       </div>
       <div className="category-tabs flex justify-center text-xl mb-5">
         <ul className="tab-menu flex gap-72">
-          <li
-            onClick={() => handleTabClick("popular")}
-            className={`tab-item text-center cursor-pointer ${
-              activeTab === "popular" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
+          <li onClick={() => handleTabClick("popular")} className={`tab-item text-center cursor-pointer ${activeTab === "popular" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Popular
           </li>
-          <li
-            onClick={() => handleTabClick("pakaian")}
-            className={`tab-item text-center cursor-pointer ${
-              activeTab === "pakaian" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
+          <li onClick={() => handleTabClick("pakaian")} className={`tab-item text-center cursor-pointer ${activeTab === "pakaian" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Pakaian
           </li>
-          <li
-            onClick={() => handleTabClick("makanan")}
-            className={`tab-item text-center cursor-pointer ${
-              activeTab === "makanan" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
+          <li onClick={() => handleTabClick("makanan")} className={`tab-item text-center cursor-pointer ${activeTab === "makanan" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Makanan
           </li>
-          <li
-            onClick={() => handleTabClick("kerajinan")}
-            className={`tab-item text-center cursor-pointer ${
-              activeTab === "kerajinan" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
+          <li onClick={() => handleTabClick("kerajinan")} className={`tab-item text-center cursor-pointer ${activeTab === "kerajinan" ? "text-black border-b-2 border-black" : "text-gray-400"}`}>
             Kerajinan
           </li>
         </ul>
@@ -48,11 +36,7 @@ function NewCard() {
         {productData.map((product) => (
           <div key={product.id} className="product-card bg-white border-4 border-red-600 rounded-lg shadow-lg overflow-hidden relative w-[300px] h-[450px]">
             <span className="label absolute top-2 left-2 bg-red-600 text-white text-xs py-1 px-2 rounded-lg">TERBARU</span>
-            <img
-              src={product.image}
-              alt={product.description}
-              className="w-[301px] h-[270px] object-cover"
-            />
+            <img src={product.image} alt={product.description} className="w-[301px] h-[270px] object-cover" />
             <div className="product-info p-4 mt-4 flex flex-col justify-between h-[130px]">
               <div>
                 <div className="rating flex items-center gap-1">

@@ -27,32 +27,23 @@ const HeaderGuest = () => {
         <Link to="/" className="hover:text-gray-200 transition">
           Beranda
         </Link>
-        <CategoryDropdown /> 
+        <CategoryDropdown />
       </nav>
 
       <div className="flex items-center bg-white rounded-full px-3 py-1 w-full max-w-xl mx-4">
-        <button
-          onClick={handleSearchSubmit}
-          className="text-gray-600 text-2xl focus:outline-none"
-        >
+        <button onClick={handleSearchSubmit} className="text-gray-600 text-2xl focus:outline-none">
           <i className="fas fa-search"></i>
         </button>
-        <input
-          type="text"
-          placeholder="Cari Produk..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className="w-full px-2 py-1 rounded-r-full focus:outline-none text-black"
-        />
+        <input type="text" placeholder="Cari Produk..." value={searchTerm} onChange={handleSearchChange} className="w-full px-2 py-1 rounded-r-full focus:outline-none text-black" />
       </div>
 
       <nav className="flex space-x-4">
-        <Link
-          to="/login"
-          className="bg-red-300 text-black px-4 py-2 rounded-md hover:bg-red-400 transition">Masuk</Link>
-        <Link
-          to="/register"
-          className="bg-red-300 text-black px-4 py-2 rounded-md hover:bg-red-400 transition" >Daftar</Link>
+        <Link to="/login" className="bg-red-300 text-black px-4 py-2 rounded-md hover:bg-red-400 transition">
+          Masuk
+        </Link>
+        <Link to="/register" className="bg-red-300 text-black px-4 py-2 rounded-md hover:bg-red-400 transition">
+          Daftar
+        </Link>
       </nav>
     </header>
   );

@@ -34,69 +34,39 @@ const DiscountCard = () => {
           <h2 className="text-2xl font-bold text-black-600">Flash Sale</h2>
 
           <div className="countdown-container flex items-center space-x-2 ml-4">
-            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">
-              {String(timeLeft.hours).padStart(2, "0")}
-            </span>
+            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">{String(timeLeft.hours).padStart(2, "0")}</span>
             <span className="text-xl">:</span>
-            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">
-              {String(timeLeft.minutes).padStart(2, "0")}
-            </span>
+            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">{String(timeLeft.minutes).padStart(2, "0")}</span>
             <span className="text-xl">:</span>
-            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">
-              {String(timeLeft.seconds).padStart(2, "0")}
-            </span>
+            <span className="bg-[#F7CDCF] text-black font-bold px-4 py-2 rounded-md">{String(timeLeft.seconds).padStart(2, "0")}</span>
           </div>
         </div>
       </div>
 
-      <Swiper
-        spaceBetween={10}
-        slidesPerView={4}
-        loop={false}
-        autoplay={{ delay: 2500 }}>
+      <Swiper spaceBetween={10} slidesPerView={4} loop={false} autoplay={{ delay: 2500 }}>
         {DiscountData.map((product, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="product-cardrek bg-[#f9f9f9] border-4 border-[#C62E2E] ml-5 mr-5 rounded-lg shadow-md w-[300px] h-[465px] flex flex-col"
-              style={{ minWidth: "300px", minHeight: "465px" }} >
-              <img
-                src={product.image}
-                alt={product.title}
-                className="w-full h-[270px] object-cover rounded-t-lg" />
+            <div className="product-cardrek bg-[#f9f9f9] border-4 border-[#C62E2E] ml-5 mr-5 rounded-lg shadow-md w-[300px] h-[465px] flex flex-col" style={{ minWidth: "300px", minHeight: "465px" }}>
+              <img src={product.image} alt={product.title} className="w-full h-[270px] object-cover rounded-t-lg" />
 
               <div className="product-infos p-4 flex flex-col justify-between h-[195px]">
                 <div className="rating-lama flex items-center mb-4 mt-5 text-base">
                   {[...Array(5)].map((_, starIndex) => (
-                    <i
-                      key={starIndex}
-                      className={`fas fa-star ${
-                        starIndex < product.rating
-                          ? "text-yellow-400"
-                          : "text-gray-300"
-                      }`}
-                    ></i>
+                    <i key={starIndex} className={`fas fa-star ${starIndex < product.rating ? "text-yellow-400" : "text-gray-300"}`}></i>
                   ))}
                   <span className="ml-2 text-gray-700">({product.rating})</span>
                 </div>
 
-                <h3 className="text-base font-semibold text-gray-800 mt-4 text-left">
-                  {product.title}
-                </h3>
+                <h3 className="text-base font-semibold text-gray-800 mt-4 text-left">{product.title}</h3>
 
                 <div className="price flex justify-between mt-auto">
                   {timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0 ? (
                     <>
-                      <span className="discount-price text-lg font-bold text-[#C62E2E]">
-                        {product.discountPrice}
-                      </span>
-                      <span className="original-price text-lg line-through text-gray-500">
-                        {product.originalPrice}
-                      </span>
+                      <span className="discount-price text-lg font-bold text-[#C62E2E]">{product.discountPrice}</span>
+                      <span className="original-price text-lg line-through text-gray-500">{product.originalPrice}</span>
                     </>
                   ) : (
-                    <span className="original-price text-lg font-bold text-[#C62E2E]">
-                      {product.originalPrice}
-                    </span>
+                    <span className="original-price text-lg font-bold text-[#C62E2E]">{product.originalPrice}</span>
                   )}
                 </div>
               </div>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
-import CategoryDropdown from "./CategoryDropdown"; 
+import { Link } from "react-router-dom";
+import CategoryDropdown from "./CategoryDropdown";
 import ProfileDropdown from "./ProfileDropdown";
 
 const Header = () => {
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value); 
+    setSearchTerm(event.target.value);
   };
 
   const handleSearchSubmit = () => {
@@ -24,25 +24,19 @@ const Header = () => {
       </div>
 
       <nav className="nav flex space-x-4 items-center ml-20">
-        <Link to="/home" className="">Home</Link>
+        <Link to="/home" className="">
+          Home
+        </Link>
         <CategoryDropdown />
       </nav>
 
       <div className="search-bar flex-grow flex items-center bg-white rounded-[15px] pl-3 pr-2 py-1 mx-auto w-full max-w-xl">
-        <i
-          className="fas fa-search text-gray-600 cursor-pointer text-2xl" 
-          onClick={handleSearchSubmit}></i>
-        <input
-          type="text"
-          placeholder="Cari Produk..."
-          value={searchTerm}
-          onChange={handleSearchChange} 
-          className="search-input w-full px-2 py-1 rounded-[15px] focus:outline-none text-black"
-        />
+        <i className="fas fa-search text-gray-600 cursor-pointer text-2xl" onClick={handleSearchSubmit}></i>
+        <input type="text" placeholder="Cari Produk..." value={searchTerm} onChange={handleSearchChange} className="search-input w-full px-2 py-1 rounded-[15px] focus:outline-none text-black" />
       </div>
 
       <nav className="nav flex space-x-10 items-center ml-auto">
-        <Link to="/cart" className="keranjang00 text-white text-3xl"> 
+        <Link to="/keranjang" className="keranjang00 text-white text-3xl">
           <i className="fas fa-shopping-cart"></i>
         </Link>
 

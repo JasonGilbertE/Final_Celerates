@@ -1,5 +1,5 @@
 import React from "react";
-import popularData from "../services/PopularData"; 
+import popularData from "../services/PopularData";
 
 function PopularCard() {
   return (
@@ -13,41 +13,20 @@ function PopularCard() {
       <div className="popular-content flex gap-8">
         <div className="sidebar w-64 flex flex-col items-center">
           <div className="category-sidebar w-full">
-            <button className="category-button active text-[#F53E32] text-left font-bold bg-red-100 p-2 rounded-md mb-2 w-full">
-              Kategori
-            </button>
-            <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">
-              Pakaian
-            </button>
-            <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">
-              Makanan
-            </button>
-            <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">
-              Kerajinan
-            </button>
+            <button className="category-button active text-[#F53E32] text-left font-bold bg-red-100 p-2 rounded-md mb-2 w-full">Kategori</button>
+            <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">Pakaian</button>
+            <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">Makanan</button>
+            <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">Kerajinan</button>
           </div>
-          <img
-            src="/assets/images/banner0.png"
-            alt="Banner Promo"
-            className="banner-img w-full rounded-lg mt-8"
-            style={{ height: "820px" }} 
-          />
+          <img src="public/assets/images/banner5.png" alt="Banner Promo" className="banner-img w-full rounded-lg mt-8" style={{ height: "820px" }} />
         </div>
 
         <div className="products-populer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-grow">
           {popularData.map((product) => (
-            <div
-              key={product.id}
-              className="card-populer bg-white border-4 border-red-600 rounded-lg shadow-lg overflow-hidden relative">
-              <span className="label absolute top-2 left-2 bg-red-600 text-white text-xs py-1 px-2 rounded-lg">
-                TERBARU
-              </span>
-              <img
-                src={product.image}
-                alt={product.description}
-                className="w-full h-48 object-cover rounded-t-lg"
-                style={{ height: "270px" }}/>
-                
+            <div key={product.id} className="card-populer bg-white border-4 border-red-600 rounded-lg shadow-lg overflow-hidden relative">
+              <span className="label absolute top-2 left-2 bg-red-600 text-white text-xs py-1 px-2 rounded-lg">TERBARU</span>
+              <img src={product.image} alt={product.description} className="w-full h-48 object-cover rounded-t-lg" style={{ height: "270px" }} />
+
               <div className="card-body p-4 flex flex-col justify-between h-56">
                 <div className="rating flex items-center mt-7 text-yellow-400 mb-9">
                   {"⭐".repeat(product.rating)}
