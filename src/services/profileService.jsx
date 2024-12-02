@@ -1,10 +1,7 @@
-// src/services/profilService.js
 import axios from "axios";
 
-// Set base URL untuk API (ganti dengan URL backend Anda)
-const API_URL = "https://api.example.com"; // Ganti dengan URL API yang sesuai
+const API_URL = "https://api.example.com"; 
 
-// Fungsi untuk mendapatkan data profil pengguna
 export const getProfile = async (userId) => {
   try {
     const response = await axios.get(`${API_URL}/users/${userId}`);
@@ -15,7 +12,6 @@ export const getProfile = async (userId) => {
   }
 };
 
-// Fungsi untuk mengupdate data profil pengguna
 export const updateProfile = async (userId, profileData) => {
   try {
     const response = await axios.put(`${API_URL}/users/${userId}`, profileData);
@@ -26,7 +22,6 @@ export const updateProfile = async (userId, profileData) => {
   }
 };
 
-// Fungsi untuk menghapus profil pengguna
 export const deleteProfile = async (userId) => {
   try {
     const response = await axios.delete(`${API_URL}/users/${userId}`);

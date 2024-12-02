@@ -18,7 +18,7 @@ function PopularCard() {
             <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">Makanan</button>
             <button className="category-button p-2 rounded-md text-left mb-2 w-full font-bold text-black bg-red-100">Kerajinan</button>
           </div>
-          <img src="public/assets/images/banner0.png" alt="Banner Promo" className="banner-img w-full rounded-lg mt-8" style={{ height: "820px" }} />
+          <img src="/assets/images/banner0.png" alt="Banner Promo" className="banner-img w-full rounded-lg mt-8" style={{ height: "820px" }} />
         </div>
 
         <div className="products-populer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-grow">

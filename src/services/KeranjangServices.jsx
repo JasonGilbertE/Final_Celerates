@@ -1,5 +1,3 @@
-import { Navigate } from "react-router-dom";
-
 export const cartData = [
   {
     id: 1,
@@ -7,7 +5,7 @@ export const cartData = [
     details: "merah, hitam",
     price: 30000,
     quantity: 1,
-    image: "public/assets/images/K_DOMPETANYAM.jpeg",
+    image: "/assets/images/K_DOMPETANYAM.jpeg",
   },
   {
     id: 2,
@@ -15,7 +13,7 @@ export const cartData = [
     details: "lingkaran, tali polos",
     price: 60000,
     quantity: 1,
-    image: "public/assets/images/K_SLIMBAGROTAN.jpeg",
+    image: "/assets/images/K_SLIMBAGROTAN.jpeg",
     status: "Sedang diproses",
   },
   {
@@ -24,6 +22,6 @@ export const cartData = [
     details: "Biru, L",
     price: 270000,
     quantity: 1,
-    image: "public/assets/images/P_BLOUSEBIRU.jpeg",
+    image: "/assets/images/P_BLOUSEBIRU.jpeg",
   },
 ];
