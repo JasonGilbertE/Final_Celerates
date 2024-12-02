@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <footer className="footer bg-red-700 text-white p-4">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
-        {/* Logo & Social Media */}
         <div className="footer-logo">
           <h3 className="text-lg font-bold mb-2">Central Java</h3>
           <div className="social-icons flex gap-2">
@@ -21,7 +20,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Menu Utama */}
         <div className="footer-menu">
           <h4 className="text-sm font-bold mb-2">Menu Utama</h4>
           <ul>
@@ -43,7 +41,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Kategori */}
         <div className="footer-category">
           <h4 className="text-sm font-bold mb-2">Kategori</h4>
           <ul>
@@ -65,7 +62,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Pengaturan */}
         <div className="footer-settings">
           <h4 className="text-sm font-bold mb-2">Pengaturan</h4>
           <ul>

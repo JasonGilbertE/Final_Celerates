@@ -1,13 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const ACardKerajinan = ({ product, onDelete }) => {
+const ACardKerajinan = ({ product, onDelete, onEdit }) => {
   const [showDropdown, setShowDropdown] = useState(false);
-
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
-
-  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -25,31 +22,27 @@ const ACardKerajinan = ({ product, onDelete }) => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
-  const handleEdit = () => {
-    navigate(`/admin/edit-produk/${product.id}`); 
-  };
-
   return (
     <div className="relative border-4 border-[#C62E2E] rounded-lg overflow-hidden shadow-md bg-white">
-      <img
-        src={product.image || ""}
-        alt={product.name || "Gambar Tidak Tersedia"}
-        className="w-full h-48 object-cover"
-      />
-
-      <div className="p-4 text-left">
-        <h3 className="text-lg font-semibold text-gray-800">{product.name || "Nama Tidak Tersedia"}</h3>
-        <p className="text-[#C62E2E] font-bold">
-          Rp. {product.price ? product.price.toLocaleString() : "Harga tidak tersedia"}
-        </p>
-      </div>
+      <Link to={`/admin/kerajinan/${product.id}`} className="block">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-4 text-left">
+          <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
+          <p className="text-[#C62E2E] font-bold">
+            Rp. {product.price ? product.price.toLocaleString() : 'Harga tidak tersedia'}
+          </p>
+        </div>
+      </Link>
 
       <div className="absolute top-4 right-4">
         <button
@@ -63,16 +56,19 @@ const ACardKerajinan = ({ product, onDelete }) => {
         {showDropdown && (
           <div
             ref={dropdownRef}
-            className="absolute right-0 mt-2 bg-[#C62E2E] border shadow-lg rounded-lg z-10">
+            className="absolute right-0 mt-2 bg-[#C62E2E] border shadow-lg rounded-lg z-10"
+          >
             <button
-              className="block w-full px-4 py-2 text-sm text-white text-left"
-              onClick={() => onDelete(product.id)}>
-              Hapus
+              className="block w-full px-4 py-2 text-sm text-white"
+              onClick={() => onEdit(product.id)}
+            >
+              Ubah
             </button>
             <button
-              className="block w-full px-4 py-2 text-sm text-white text-left"
-              onClick={handleEdit}  >
-              Ubah
+              className="block w-full px-4 py-2 text-sm text-white"
+              onClick={() => onDelete(product.id)}
+            >
+              Hapus
             </button>
           </div>
         )}

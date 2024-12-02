@@ -10,7 +10,7 @@ const BannerBwh = () => {
       <Swiper modules={[Pagination, Autoplay]} spaceBetween={10} slidesPerView={1} loop={true} autoplay={{ delay: 3000, disableOnInteraction: false }} pagination={{ clickable: true }} className="rounded-lg">
         {/* Slide pertama */}
         <SwiperSlide>
-          <img src="public/assets/images/bwhbanner.jpg" alt="Temple in Central Java" className="w-full h-[400px] block rounded-2xl" />
+          <img src="public/assets/images/bwhbanner.jpeg" alt="Temple in Central Java" className="w-full h-[400px] block rounded-2xl" />
         </SwiperSlide>
 
         {/* Slide kedua */}

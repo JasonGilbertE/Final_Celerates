@@ -1,7 +1,7 @@
 const populerData = [
   {
     id: 1,
-    image: "public/assets/images/P_BATIKSOLO.jpeg",
+    image: "public/assets/images/mbatikmerah.png",
     name: "Kemeja Batik Solo",
     rating: 5,
     price: "Rp. 250.000",
@@ -9,7 +9,7 @@ const populerData = [
   },
   {
     id: 2,
-    image: "public/assets/images/K_SLIMBAGROTAN.jpeg",
+    image: "public/assets/images/rotantas.png",
     name: "Sling bag rotan",
     rating: 5,
     price: "Rp. 170.000",
@@ -17,7 +17,7 @@ const populerData = [
   },
   {
     id: 3,
-    image: "public/assets/images/P_BLOUSEBIRU.jpeg",
+    image: "public/assets/images/batikbiru.png",
     name: "Blouse Batik Kekinian",
     rating: 5,
     price: "Rp. 290.000",
@@ -41,7 +41,7 @@ const populerData = [
   },
   {
     id: 6,
-    image: "public/assets/images/M_gethuk.jpg",
+    image: "public/assets/images/gethuk.jpeg",
     name: "Gethuk Jawa Tengah",
     rating: 5,
     price: "Rp. 3.500",

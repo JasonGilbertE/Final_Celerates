@@ -59,7 +59,9 @@ const Home = () => {
 
         <BannerBwh />
 
+        <section className="customer-review mb-16">
         <CustomerReviewCard />
+        </section>
       </main>
 
       <Footer />

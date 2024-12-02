@@ -31,7 +31,7 @@ const CustomerReviewCard = () => {
       >
         {ReviewData.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="review-card bg-white p-4 shadow-md rounded-lg border-4 border-red-500 h-auto min-h-[250px] flex flex-col justify-between">
+            <div className="review-card bg-white p-4 shadow-md rounded-lg border-4 border-[#C62E2E] h-auto min-h-[250px] flex flex-col justify-between">
               <div>
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center">
