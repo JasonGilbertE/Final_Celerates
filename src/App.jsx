@@ -27,6 +27,7 @@ import AdminKerajinan from './Admin/pages/AdminKerajinan';
 import DetailPembeli from './Admin/pages/DetailPembeli';
 
 import AKerajinanDetail from './Admin/pages/AKerajinanDetail';
+import ADetailPakaian from './Admin/pages/APakaianDetail';
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -198,6 +199,16 @@ const App = () => {
           }
         />
         <Route path="/admin/kerajinan/:id" element={<AKerajinanDetail />} />
+        <Route
+  path="/admin/pakaian/:id"
+  element={
+    <PrivateRoute admin={true}>
+      <main>
+        <ADetailPakaian />
+      </main>
+    </PrivateRoute>
+  }
+/>
       </Routes>
     </Router>
   );
