@@ -99,15 +99,23 @@ const RiwayatPesanan = () => {
                   {filteredData.map((data, index) => (
                     <tr key={index}>
                       <td className="border-b py-2 px-4">{data.produk}</td>
-                      <td className="border-b py-2 px-4">{data.idPesanan}</td>
-                      <td className="border-b py-2 px-4">{data.tanggal}</td>
                       <td
                         className="border-b py-2 px-4 text-blue-500 cursor-pointer"
-                        onClick={() => handleUserClick(data.idUser)} >
-                        {data.namaUser}
+                        onClick={() => handleUserClick(data.idUser)} // Tambahkan link ke detail pembeli
+                      >
+                        {data.idPesanan}
                       </td>
+                      <td className="border-b py-2 px-4">{data.tanggal}</td>
+                      <td className="border-b py-2 px-4">{data.namaUser}</td>
                       <td
-                        className={`border-b py-2 px-4 ${data.status === "Proses" ? "text-yellow-500" : data.status === "Dibatalkan" ? "text-red-500" : "text-green-500"}`} >
+                        className={`border-b py-2 px-4 ${
+                          data.status === "Proses"
+                            ? "text-yellow-500"
+                            : data.status === "Dibatalkan"
+                            ? "text-red-500"
+                            : "text-green-500"
+                        }`}
+                      >
                         {data.status}
                       </td>
                       <td className="border-b py-2 px-4 text-right">

@@ -14,7 +14,7 @@ const APakaianDetail = () => {
     return (
       <div className="flex flex-col min-h-screen">
         <AdminHeader />
-        <main className="flex-grow mt-20 bg-gray-50 py-8">
+        <main className="flex-grow mt-20 py-8">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-center text-red-600">
               Produk tidak ditemukan!
@@ -30,7 +30,7 @@ const APakaianDetail = () => {
     <div className="flex flex-col min-h-screen">
       <AdminHeader />
 
-      <main className="flex-grow mt-20 bg-gray-50 py-8">
+      <main className="flex-grow mt-20 py-8">
         <div className="container mx-auto px-4 flex">
           <Sidebar />
 
@@ -41,8 +41,7 @@ const APakaianDetail = () => {
               </Link>
             </div>
 
-            <div className="flex p-6 rounded-lg bg-white">
-              {/* Gambar Produk */}
+            <div className="flex pt-6 bg-white border-t border-gray-300 pb-2 mb-6">
               <div className="w-1/3">
                 <img
                   src={product.image}
@@ -51,29 +50,30 @@ const APakaianDetail = () => {
                 />
               </div>
 
-              {/* Detail Produk */}
               <div className="w-2/3 pl-6">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">{product.name}</h2>
-                <p className="text-xl font-semibold text-[#C62E2E] mb-6">
-                  Rp. {parseInt(product.price).toLocaleString()}
-                </p>
+                <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                  {product.name}
+                </h2>
+                <p className="text-gray-600 mb-4">{product.description}</p>
 
                 <div className="border-t pt-4">
                   <p><strong>Kategori:</strong> {product.category}</p>
                   <p><strong>Bahan:</strong> {product.material}</p>
                   <p><strong>Warna:</strong> {product.color}</p>
                   <p><strong>Ukuran:</strong> {product.size.join(', ')}</p>
+                  <p className="text-2xl font-semibold text-[#C62E2E] mt-4">
+                    Rp. {parseInt(product.price).toLocaleString()}
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Tabs Deskripsi dan Informasi */}
             <div className="mt-6">
               <div className="flex border-b">
                 <button
                   className={`px-6 py-2 font-bold ${
                     activeTab === 'description'
-                      ? 'border-b-4 border-[#C62E2E] text-[#C62E2E]'
+                      ? 'border-b-4 border-[#000000] text-[#C62E2E]'
                       : 'text-gray-600'
                   }`}
                   onClick={() => setActiveTab('description')}
@@ -83,7 +83,7 @@ const APakaianDetail = () => {
                 <button
                   className={`px-6 py-2 font-bold ${
                     activeTab === 'information'
-                      ? 'border-b-4 border-[#C62E2E] text-[#C62E2E]'
+                      ? 'border-b-4 border-[#000000] text-[#C62E2E]'
                       : 'text-gray-600'
                   }`}
                   onClick={() => setActiveTab('information')}
@@ -92,7 +92,7 @@ const APakaianDetail = () => {
                 </button>
               </div>
 
-              <div className="p-4 bg-white border-4 border-[#C62E2E] mt-2">
+              <div className="p-4 bg-white border-4 border-[#ffffff] mt-2">
                 {activeTab === 'description' && (
                   <div>
                     <h3 className="font-bold mb-2">Deskripsi</h3>

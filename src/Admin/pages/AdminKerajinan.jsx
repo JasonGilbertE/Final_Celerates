@@ -17,7 +17,7 @@ const AdminKerajinan = () => {
     <div className="flex flex-col min-h-screen">
       <AdminHeader />
 
-      <main className="flex-grow mt-20 bg-gray-50 py-8">
+      <main className="flex-grow mt-20 py-8">
         <div className="container mx-auto px-4 flex">
           <Sidebar />
 
