@@ -3,7 +3,7 @@ import AdminHeader from '../components/AdminHeader';
 import AdminFooter from '../components/AdminFooter';
 import Sidebar from '../components/Sidebar';
 import TopCard from '../components/TopCard';
-
+import RiwayatData from '../services/RiwayatData';  
 const AdminDashboard = () => {
   const currentDate = new Date();
 
@@ -11,16 +11,21 @@ const AdminDashboard = () => {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 
   const currentMonthYear = `${currentDate.toLocaleString('default', { month: 'long' })} ${currentDate.getFullYear()}`;
 
+  const totalPenjualan = RiwayatData.reduce((acc, item) => acc + item.jumlah, 0);
+  const totalPesananProses = RiwayatData.filter(item => item.status === 'Proses').length;
+  const totalPesananSelesai = RiwayatData.filter(item => item.status === 'Selesai').length;
+  const totalPengembalian = RiwayatData.filter(item => item.status === 'Dibatalkan').length;
+
   const cardData = [
-    { title: "Total Penjualan", value: "Rp. 2,234,000", date: currentMonthYear },
-    { title: "Pesanan dalam proses", value: "7", date: currentMonthYear },
-    { title: "Pesanan selesai", value: "10", date: currentMonthYear },
-    { title: "Pengembalian", value: "2", date: currentMonthYear }
+    { title: 'Total Penjualan', value: `Rp. ${totalPenjualan.toLocaleString()}`, date: currentMonthYear },
+    { title: 'Pesanan dalam proses', value: totalPesananProses, date: currentMonthYear },
+    { title: 'Pesanan selesai', value: totalPesananSelesai, date: currentMonthYear },
+    { title: 'Pengembalian', value: totalPengembalian, date: currentMonthYear },
   ];
 
   return (

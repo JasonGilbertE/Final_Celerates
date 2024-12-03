@@ -200,12 +200,12 @@ const App = () => {
         />
         <Route path="/admin/kerajinan/:id" element={<AKerajinanDetail />} />
         <Route
-  path="/admin/pakaian/:id"
-  element={
-    <PrivateRoute admin={true}>
-      <main>
-        <ADetailPakaian />
-      </main>
+           path="/admin/pakaian/:id"
+           element={
+        <PrivateRoute admin={true}>
+          <main>
+          <ADetailPakaian />
+          </main>
     </PrivateRoute>
   }
 />

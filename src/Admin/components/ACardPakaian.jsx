@@ -69,6 +69,11 @@ const ACardPakaian = ({ product, onDelete }) => {
             >
               Hapus
             </button>
+            <button
+              className="block w-full px-4 py-2 text-sm text-white text-left"
+              onClick={() => onEdit(product.id)}  >
+              Ubah
+            </button>
           </div>
         )}
       </div>
