@@ -21,8 +21,8 @@ const UlasanAdmin = () => {
           <Sidebar /> 
 
           <div className="w-3/4">
-            <h2 className="text-2xl font-bold mb-6 border-b border-gray-300 pb-2">Penilaian Pelanggan</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <h2 className="text-2xl font-bold mb-6 border-b border-gray-300">Penilaian Pelanggan</h2>
+            <div className="grid grid-cols-2">
               {reviews.map((review) => (
                 <div key={review.id} className="relative">
                   <UlasanCard 

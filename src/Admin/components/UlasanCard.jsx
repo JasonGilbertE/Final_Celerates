@@ -30,7 +30,7 @@ const UlasanCard = ({ review, onDelete }) => {
   }, []);
 
   return (
-    <div className="bg-white border-4 border-[#C62E2E] mx-5 ml-10 my-4 rounded-md px-4 py-4 shadow-sm flex flex-col justify-between w-[400px] h-[230px] relative">
+    <div className="bg-white border-4 border-[#C62E2E] my-4 rounded-md px-4 py-4 shadow-sm flex flex-col justify-between w-[400px] h-[230px] relative">
       <div className="absolute top-2 right-2">
         <button
           ref={buttonRef}

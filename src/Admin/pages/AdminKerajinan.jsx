@@ -21,7 +21,7 @@ const AdminKerajinan = () => {
         <div className="container mx-auto px-4 flex">
           <Sidebar />
 
-          <div className="w-3/4 ml-8">
+          <div className="w-3/4">
             <div className="flex justify-between items-center mb-6 border-b border-gray-300 pb-2">
               <h2 className="text-2xl font-bold">
                 Kategori Produk
