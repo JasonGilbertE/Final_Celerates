@@ -1,19 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import { FiSearch } from 'react-icons/fi'; 
-import { FaCaretDown } from 'react-icons/fa'; 
+import { useNavigate } from 'react-router-dom';
+import { FiSearch } from 'react-icons/fi';
+import { FaCaretDown } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const AdminHeader = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
-  const navigate = useNavigate(); 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
   const handleLogout = () => {
-    navigate('/login'); 
+    navigate('/login');
   };
 
   const handleLogoClick = () => {
-    navigate('/admin/dashboard'); 
+    navigate('/admin/dashboard');
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   useEffect(() => {
@@ -33,14 +39,20 @@ const AdminHeader = () => {
     <header className="bg-[#C62E2E] text-white p-4 flex justify-between items-center fixed top-0 w-full z-10 border-b-2 border-gray-300">
       <div
         className="logo text-xl font-bold font-ribeye flex-shrink-0 pl-5 flex flex-col justify-center items-center cursor-pointer"
-        onClick={handleLogoClick} 
+        onClick={handleLogoClick}
       >
         <span>CENTRAL</span>
         <span>JAVA</span>
       </div>
 
-      <div className="flex items-center space-x-4">
-        <div className="relative w-80"> 
+      <div className="lg:hidden flex items-center">
+        <button onClick={toggleMobileMenu} className="text-white">
+          <GiHamburgerMenu size={24} />
+        </button>
+      </div>
+
+      <div className={`flex items-center space-x-4 ${isMobileMenuOpen ? 'flex-col absolute mt-6 bg-[#C62E2E] pt-6 w-full top-16 left-0 py-4' : 'hidden lg:flex'}`}>
+        <div className="relative w-80">
           <input
             type="text"
             placeholder="Cari Produk..."
@@ -49,7 +61,7 @@ const AdminHeader = () => {
           <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
         </div>
 
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative pt-5" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="flex items-center px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 focus:outline-none"
