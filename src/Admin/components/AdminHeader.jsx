@@ -61,7 +61,7 @@ const AdminHeader = () => {
           <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
         </div>
 
-        <div className="relative pt-5" ref={dropdownRef}>
+        <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="flex items-center px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 focus:outline-none"
