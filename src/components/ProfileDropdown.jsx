@@ -33,12 +33,14 @@ const ProfileDropdown = () => {
       {isOpen && (
         <div className="profil-dropdown-content absolute bg-[#F7CDCF] rounded-lg shadow-md mt-1 w-40 text-left right-1">
           {" "}
-          {/* Mengatur posisi dropdown lebih ke kiri */}
           <Link to="/profile" className="block p-2 text-black">
             Pengaturan Akun
           </Link>
-          <Link to="loyalitas" className="block p-2 text-black">
+          <Link to="/loyalitas" className="block p-2 text-black">
             Loyalitas
+          </Link>
+          <Link to="/login" className="block p-2 text-black">
+            Keluar
           </Link>
         </div>
       )}

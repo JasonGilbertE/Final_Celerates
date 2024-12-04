@@ -9,6 +9,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import HomeGuest from "./pages/HomeGuest";
 import VerificationCode from "./pages/VerificationCode";
 import NewPassword from "./pages/NewPassword";
+import Profile from "./pages/Profile";
+import Loyalitas from "./pages/Loyalitas"
 
 import AdminDashboard from "./Admin/pages/AdminDashboard";
 import RiwayatPesanan from "./Admin/pages/RiwayatPesanan";
@@ -42,6 +44,8 @@ const App = () => {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/verification-code" element={<VerificationCode />} />
         <Route path="/new-password" element={<NewPassword />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/loyalitas" element={<Loyalitas />} />
         <Route
           path="/home"
           element={

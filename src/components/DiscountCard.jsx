@@ -43,10 +43,36 @@ const DiscountCard = () => {
         </div>
       </div>
 
-      <Swiper spaceBetween={10} slidesPerView={4} loop={false} autoplay={{ delay: 2500 }}>
+      <Swiper
+        spaceBetween={5}  // Adjust space between cards to be smaller
+        slidesPerView={1}  // Default for mobile
+        loop={false}
+        autoplay={{ delay: 2500 }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,  // 2 slides on small screens
+            spaceBetween: 5,  // Smaller space between cards on small screens
+          },
+          768: {
+            slidesPerView: 3,  // 3 slides on medium screens
+            spaceBetween: 10,  // Adjust space between cards for medium screens
+          },
+          1024: {
+            slidesPerView: 4,  // 4 slides on large screens
+            spaceBetween: 10,  // Adjusted space between cards
+          },
+          1200: {
+            slidesPerView: 5,  // 5 slides on larger screens
+            spaceBetween: 15,  // Slightly increased space between cards for large screens
+          },
+        }}
+      >
         {DiscountData.map((product, index) => (
           <SwiperSlide key={index}>
-            <div className="product-cardrek bg-[#f9f9f9] border-4 border-[#C62E2E] ml-5 mr-5 rounded-lg shadow-md w-[300px] h-[465px] flex flex-col" style={{ minWidth: "300px", minHeight: "465px" }}>
+            <div
+              className="product-cardrek bg-[#f9f9f9] border-4 border-[#C62E2E] mx-5 rounded-lg shadow-md flex flex-col"
+              style={{ width: "297.5px", height: "463.5px" }}
+            >
               <img src={product.image} alt={product.title} className="w-full h-[270px] object-cover rounded-t-lg" />
 
               <div className="product-infos p-4 flex flex-col justify-between h-[195px]">
