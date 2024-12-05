@@ -22,6 +22,6 @@ export const cartData = [
     details: "Biru, L",
     price: 270000,
     quantity: 1,
-    image: "/assets/images/P_BLOUSEBIRU.jpeg",
+    image: "/assets/images/batikbiru.png",
   },
 ];

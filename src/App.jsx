@@ -11,6 +11,10 @@ import VerificationCode from "./pages/VerificationCode";
 import NewPassword from "./pages/NewPassword";
 import Profile from "./pages/Profile";
 import Loyalitas from "./pages/Loyalitas"
+import Keranjang from "./pages/Keranjang"
+import Pengiriman from "./pages/Pengiriman";
+import Pembayaran from "./pages/Pembayaran";
+import Transaksi from "./pages/Transaksi";
 
 import AdminDashboard from "./Admin/pages/AdminDashboard";
 import RiwayatPesanan from "./Admin/pages/RiwayatPesanan";
@@ -46,6 +50,10 @@ const App = () => {
         <Route path="/new-password" element={<NewPassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/loyalitas" element={<Loyalitas />} />
+        <Route path="/keranjang" element={<Keranjang/>} />
+        <Route path="/pengiriman" element={<Pengiriman/>} />
+        <Route path="/pembayaran" element={<Pembayaran/>} />
+        <Route path="/transaksi" element={<Transaksi/>} />
         <Route
           path="/home"
           element={
