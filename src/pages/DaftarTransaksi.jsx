@@ -37,13 +37,13 @@ const DaftarTransaksi = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <div className="container mx-auto mt-24 flex items-center space-x-2">
-        <i className="fas fa-user-circle text-2xl"></i>
-        <h1 className="text-xl font-bold">Akun</h1>
+      <div className="bg-white mx-8 pt-28 flex items-center space-x-2 border-b">
+        <i className="fas fa-user-circle text-2xl pb-5"></i>
+        <span className="text-xl pb-5">Akun</span>
       </div>
-      <hr className="container mx-auto mt-2" />
 
-      <main className="container mx-auto mt-4 flex flex-col md:flex-row flex-grow">
+
+      <main className=" container mx-auto flex md:flex-row flex-1 p-8">
         <SidebarProfile />
 
         <section className="w-full md:w-3/4 md:ml-8">
