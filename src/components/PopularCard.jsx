@@ -21,7 +21,7 @@ function PopularCard() {
           <img src="/assets/images/banner0.png" alt="Banner Promo" className="banner-img w-full rounded-lg mt-8" style={{ height: "820px" }} />
         </div>
 
-        <div className="products-populer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-grow">
+        <div className="products-populer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 gap-8 flex-grow">
           {popularData.map((product) => (
             <div key={product.id} className="card-populer bg-white border-4 border-red-600 rounded-lg shadow-lg overflow-hidden relative">
               <span className="label absolute top-2 left-2 bg-red-600 text-white text-xs py-1 px-2 rounded-lg">TERBARU</span>

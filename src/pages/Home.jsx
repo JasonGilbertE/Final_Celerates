@@ -48,7 +48,7 @@ const Home = () => {
         </section>
 
         <section className="new-products mt-8">
-          <div className="grid grid-cols-1">
+          <div className="">
             <NewCard />
           </div>
         </section>

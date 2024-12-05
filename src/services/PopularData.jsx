@@ -47,6 +47,22 @@ const populerData = [
     price: "Rp. 3.500",
     description: "Gethuk Khas Jawa Tengah (per pcs)",
   },
+  {
+    id: 7,
+    image: "/assets/images/slimfitcwo.png",
+    name: "Batik Slimfit Pria",
+    rating: 5,
+    price: "Rp. 300.000",
+    description: "Kemeja Batik Pria Slimfit Lengan Pendek",
+  },
+  {
+    id: 8,
+    image: "/assets/images/tisukayu.png",
+    name: "Kotak Tisu Kayu Jepara",
+    rating: 5,
+    price: "Rp.55.000",
+    description: "Kotak tisu ukiran kayu asli Jepara ",
+  },
 ];
 
 export default populerData;

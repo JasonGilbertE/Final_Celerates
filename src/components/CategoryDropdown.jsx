@@ -27,7 +27,7 @@ const CategoryDropdown = () => {
   return (
     <div ref={dropdownRef} className="relative">
       <button className="dropbtn bg-[#C62E2E] text-white p-2 rounded-md" onClick={toggleDropdown}>
-        Kategori <i className="fas fa-chevron-down ml-1"></i>
+        Kategori <i className="fas fa-chevron-down"></i>
       </button>
       {isOpen && (
         <div className="dropdown-content absolute bg-[#F7CDCF] rounded-lg shadow-md mt-1 w-40 text-left">

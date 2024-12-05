@@ -59,7 +59,7 @@ const Rating = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="flex-grow container mt-14 ml-8 py-8">
+      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 mt-14 py-8">
         <h1 className="text-3xl font-semibold text-left my-4 border-b border-gray-300 pb-4 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ const Rating = () => {
 
         <div className="flex justify-center mt-8">
           <button
-            className="bg-[#C62E2E] text-white font-semibold py-2 px-4 rounded-md w-[285px] h-[40px] hover:bg-red-600 transition-colors"
+            className="bg-[#C62E2E] text-white font-semibold py-2 px-4 rounded-md w-full sm:w-auto h-[40px] hover:bg-red-600 transition-colors"
             onClick={() => {
               setIsFormVisible(true);
               window.scrollTo({ top: 0, behavior: "smooth" }); 
