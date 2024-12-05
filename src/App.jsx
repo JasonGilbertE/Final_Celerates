@@ -14,7 +14,7 @@ import Loyalitas from "./pages/Loyalitas"
 import Keranjang from "./pages/Keranjang"
 import Pengiriman from "./pages/Pengiriman";
 import Pembayaran from "./pages/Pembayaran";
-import Transaksi from "./pages/Transaksi";
+import DaftarTransaksi from "./pages/DaftarTransaksi";
 
 import AdminDashboard from "./Admin/pages/AdminDashboard";
 import RiwayatPesanan from "./Admin/pages/RiwayatPesanan";
@@ -53,7 +53,7 @@ const App = () => {
         <Route path="/keranjang" element={<Keranjang/>} />
         <Route path="/pengiriman" element={<Pengiriman/>} />
         <Route path="/pembayaran" element={<Pembayaran/>} />
-        <Route path="/transaksi" element={<Transaksi/>} />
+        <Route path="/daftar-transaksi" element={<DaftarTransaksi/>} />
         <Route
           path="/home"
           element={

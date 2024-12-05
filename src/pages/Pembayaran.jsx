@@ -34,6 +34,7 @@ const Pembayaran = () => {
           return prevTimer - 1;
         });
       }, 1000);
+
       return () => clearInterval(interval);
     }
   }, [isPaymentStarted]);
@@ -44,15 +45,20 @@ const Pembayaran = () => {
 
   const handleCheckStatus = () => {
     setIsPaymentStarted(false);
-    setIsPaid(true); 
-  };
+    setIsPaid(true);
 
-  const handleNavigateToTransactions = () => {
-    const itemsProcessed = selectedProducts.map((item) => ({
+    const processedItems = selectedProducts.map((item) => ({
       ...item,
       status: "Sedang diproses",
     }));
-    navigate("/transaksi", { state: { itemsProcessed } });
+
+    const existingTransactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    const updatedTransactions = [...existingTransactions, ...processedItems];
+    localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
+  };
+
+  const handleNavigateToTransactions = () => {
+    navigate("/daftar-transaksi"); 
   };
 
   const handleBack = () => {
@@ -71,6 +77,7 @@ const Pembayaran = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <HeaderLogo />
+
       <main className="container mx-auto mt-8 flex-grow">
         <h2 className="text-xl font-semibold mt-20 mb-8">Detail Pembayaran</h2>
         <div className="flex justify-between gap-8">
@@ -132,9 +139,7 @@ const Pembayaran = () => {
                   alt="QR Code"
                   className="w-48 h-48 mx-auto mt-4"
                 />
-                <p className="text-lg font-semibold mt-4">
-                  Total Pembayaran
-                </p>
+                <p className="text-lg font-semibold mt-4">Total Pembayaran</p>
                 <p className="text-xl font-bold">Rp. {totalYangHarusDibayarkan.toLocaleString()}</p>
                 <button
                   onClick={handleCheckStatus}
