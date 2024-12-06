@@ -1,75 +1,103 @@
-import React from "react";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
 import Header from "../components/Header";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+import Footer from "../components/Footer";
 
 const Loyalitas = () => {
-  const showCode = (event) => {
-    const button = event.target;
+  const [buttons, setButtons] = useState([
+    { id: 1, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 40000 },
+    { id: 2, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 50000 },
+    { id: 3, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 60000 },
+    { id: 4, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 70000 },
+    { id: 5, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 80000 },
+    { id: 6, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 100000 }
+  ]);
 
-    button.innerText = "BVSKJDSJ";
-    button.disabled = true;
+  const showCode = (id) => {
+    setButtons((prevButtons) =>
+      prevButtons.map((button) =>
+        button.id === id
+          ? {
+              ...button,
+              text: "VOUCHER123",
+              isDisabled: true,
+              buttonColor: "#FFFFFF",
+              color: "black",
+              voucher: "VOUCHER123"
+            }
+          : button
+      )
+    );
+  };
 
-    button.classList.remove("bg-[#C62E2E]", "text-white");
-    button.classList.add("bg-white", "text-black");
-    console.log("Voucher claimed!");
+  const copyToClipboard = (voucher) => {
+    navigator.clipboard.writeText(voucher).then(() => {
+      alert("Kode voucher berhasil disalin!");
+    });
   };
 
   return (
     <div className="bg-white text-gray-800">
       <Header />
 
-      <main className="container pt-28 mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-4">Loyalitas</h1>
-        <div className="flex space-x-4 mb-8">
-          <div className="bg-[#444D5B] p-4 rounded-lg" style={{ width: "300px", height: "150px" }}>
+      <main className="container mx-auto pt-24 py-8 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-2xl font-bold mb-6 text-center md:text-left">Loyalitas</h1>
+
+        <div className="flex flex-col lg:flex-row lg:space-x-6 mb-8">
+          <div className="bg-[#444D5B] p-6 rounded-lg text-white flex flex-col justify-between w-full lg:w-1/3 h-[200px]">
             <div className="flex items-center space-x-4">
-              <i className="fas fa-medal text-2xl text-gray-300"></i>
+              <i className="fas fa-medal text-3xl text-gray-300"></i>
               <div>
-                <h2 className="text-base font-bold text-white">Silver</h2>
-                <p className="text-xs text-white">3x transaksi</p>
+                <h2 className="text-lg font-bold">Silver</h2>
+                <p className="text-sm">3x transaksi</p>
               </div>
             </div>
-            <div className="border-t border-gray-400 my-2"></div>
-            <p className="mt-2 text-xs text-white whitespace-nowrap overflow-hidden overflow-ellipsis">Selesaikan 5x transaksi untuk menjadi Gold</p>
-            <div className="w-full bg-gray-300 rounded-full h-1.5 mt-2">
-              <div className="bg-red-500 h-1.5 rounded-full" style={{ width: "60%" }}></div>
+            <div className="border-t border-gray-400 my-4"></div>
+            <p className="text-sm">Selesaikan 5x transaksi untuk menjadi Gold</p>
+            <div className="w-full bg-gray-300 rounded-full h-2 mt-2">
+              <div className="bg-red-500 h-2 rounded-full" style={{ width: "60%" }}></div>
             </div>
-            <p className="mt-2 text-xs text-white">Kamu telah menyelesaikan 3x transaksi</p>
+            <p className="mt-2 text-sm">Kamu telah menyelesaikan 3x transaksi</p>
           </div>
 
-          <div className="w-full lg:w-2/3 pl-10">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={3}
-              loop={false}
-              autoplay={{ delay: 3000 }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-              }}
-              className="mb-8"
-            >
-              {[{ minBelanja: "50.000" }, { minBelanja: "60.000" }, { minBelanja: "70.000" }, { minBelanja: "100.000" }, { minBelanja: "80.000" }, { minBelanja: "120.000" }].map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="bg-[#F7CDCF] p-9 rounded-lg flex flex-col justify-center items-center text-center">
-                    <h2 className="text-base font-bold">Klaim Voucher Gratis Ongkir</h2>
-                    <p className="text-xs">minimal belanja Rp. {item.minBelanja}</p>
-                    <button className="bg-[#C62E2E] text-white px-4 py-2 rounded mt-2 font-bold text-xs" style={{ width: "200px" }} onClick={showCode}>
-                      KLAIM
-                    </button>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="flex-1 overflow-x-auto flex space-x-4 py-4 lg:py-0">
+            {buttons.map((button) => (
+              <div
+                key={button.id}
+                className="p-6 rounded-lg flex flex-col justify-between items-center text-center flex-shrink-0"
+                style={{
+                  width: "300px", 
+                  height: "200px", 
+                  backgroundColor: "#F7CDCF"
+                }}
+              >
+                <h2 className="text-lg font-bold">
+                  Klaim Voucher <p>Gratis Ongkir</p>
+                </h2>
+                <p className="text-sm">
+                  minimal belanja Rp. {button.minPrice.toLocaleString("id-ID")}
+                </p>
+                <button
+                  className="text-sm px-4 py-2 rounded mt-2"
+                  style={{
+                    width: "200px",
+                    backgroundColor: button.buttonColor,
+                    color: button.color
+                  }}
+                  onClick={() => showCode(button.id)}
+                  disabled={button.isDisabled}
+                >
+                  {button.text}
+                </button>
+                {button.voucher && (
+                  <button
+                    onClick={() => copyToClipboard(button.voucher)}
+                    className="mt-2 text-sm text-black underline"
+                  >
+                    Salin Kode
+                  </button>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -79,15 +107,23 @@ const Loyalitas = () => {
           </a>
         </div>
 
-        <div className="mb-8">
-          <img alt="Banner 1" className="w-full rounded-lg" height="400" src="/assets/images/bannerloyalitas.png" width="1200" />
-        </div>
-
-        <div>
-          <img alt="Banner 2" className="w-full rounded-lg" height="400" src="/assets/images/banner.png" width="1200" />
+        <div className="space-y-6">
+          <img
+            alt="Banner 1"
+            className="w-full rounded-lg"
+            height="400"
+            src="/assets/images/bannerloyalitas.png"
+            width="1200"
+          />
+          <img
+            alt="Banner 2"
+            className="w-full rounded-lg"
+            height="400"
+            src="/assets/images/banner.png"
+            width="1200"
+          />
         </div>
       </main>
-
       <Footer />
     </div>
   );
