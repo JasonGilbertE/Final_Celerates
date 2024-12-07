@@ -10,11 +10,18 @@ import HomeGuest from "./pages/HomeGuest";
 import VerificationCode from "./pages/VerificationCode";
 import NewPassword from "./pages/NewPassword";
 import Profile from "./pages/Profile";
-import Loyalitas from "./pages/Loyalitas"
-import Keranjang from "./pages/Keranjang"
+import Loyalitas from "./pages/Loyalitas";
+import Keranjang from "./pages/Keranjang";
 import Pengiriman from "./pages/Pengiriman";
 import Pembayaran from "./pages/Pembayaran";
 import DaftarTransaksi from "./pages/DaftarTransaksi";
+import Terpopular from "./pages/Terpopular";
+import SearchPages from "./pages/SearchPages";
+import Kerajinan from "./pages/Kerajinan";
+import Makanan from "./pages/Makanan";
+import Pakaian from "./pages/Pakaian";
+import Terbaru from "./pages/Terbaru";
+import ProductDetail from "./pages/ProductDetail";
 
 import AdminDashboard from "./Admin/pages/AdminDashboard";
 import RiwayatPesanan from "./Admin/pages/RiwayatPesanan";
@@ -22,19 +29,19 @@ import DoneProduk from "./Admin/pages/DoneProduk";
 import CancelProduk from "./Admin/pages/CancelProduk";
 import ReturnProduk from "./Admin/pages/ReturnProduk";
 import ProsesProduk from "./Admin/pages/ProsesProduk";
-import UlasanAdmin from './Admin/pages/UlasanAdmin';
-import TambahProduk from './Admin/pages/TambahProduk';
-import AdminFlashSale from './Admin/pages/AdminFlashSale';
-import SemuaProduk from './Admin/pages/SemuaProduk';
+import UlasanAdmin from "./Admin/pages/UlasanAdmin";
+import TambahProduk from "./Admin/pages/TambahProduk";
+import AdminFlashSale from "./Admin/pages/AdminFlashSale";
+import SemuaProduk from "./Admin/pages/SemuaProduk";
 
-import AdminPakaian from './Admin/pages/AdminPakaian';
-import AdminMakanan from './Admin/pages/AdminMakanan';
-import AdminKerajinan from './Admin/pages/AdminKerajinan';
-import DetailPembeli from './Admin/pages/DetailPembeli';
+import AdminPakaian from "./Admin/pages/AdminPakaian";
+import AdminMakanan from "./Admin/pages/AdminMakanan";
+import AdminKerajinan from "./Admin/pages/AdminKerajinan";
+import DetailPembeli from "./Admin/pages/DetailPembeli";
 
-import AKerajinanDetail from './Admin/pages/AKerajinanDetail';
-import ADetailPakaian from './Admin/pages/APakaianDetail';
-import AMakananDetail from './Admin/pages/AMakananDetail';
+import AKerajinanDetail from "./Admin/pages/AKerajinanDetail";
+import ADetailPakaian from "./Admin/pages/APakaianDetail";
+import AMakananDetail from "./Admin/pages/AMakananDetail";
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -50,10 +57,19 @@ const App = () => {
         <Route path="/new-password" element={<NewPassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/loyalitas" element={<Loyalitas />} />
-        <Route path="/keranjang" element={<Keranjang/>} />
-        <Route path="/pengiriman" element={<Pengiriman/>} />
-        <Route path="/pembayaran" element={<Pembayaran/>} />
-        <Route path="/daftar-transaksi" element={<DaftarTransaksi/>} />
+        <Route path="/keranjang" element={<Keranjang />} />
+        <Route path="/pengiriman" element={<Pengiriman />} />
+        <Route path="/pembayaran" element={<Pembayaran />} />
+        <Route path="/daftar-transaksi" element={<DaftarTransaksi />} />
+        <Route path="/terpopular" element={<Terpopular />} />
+        <Route path="/search" element={<SearchPages />} />
+        <Route path="/kerajinan" element={<Kerajinan />} />
+        <Route path="/makanan" element={<Makanan />} />
+        <Route path="/pakaian" element={<Pakaian />} />
+        <Route path="/terbaru" element={<Terbaru />} />
+        <Route path="/productdetail/:id" element={<ProductDetail />} />
+        <Route path="/rating" element={<Rating />} />
+
         <Route
           path="/home"
           element={

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import DiscountCard from "../components/DiscountCard";
@@ -24,9 +25,9 @@ const Home = () => {
               <p>budaya dan kualitas terbaik dari pengrajin lokal. Dukung produk lokal,</p>
               rasakan autentiknya Jawa Tengah!
             </p>
-            <button className="shop-button bg-[#f4b5b5] text-black ml-8 py-2 px-4 rounded">
+            <Link to="/terpopular" className="shop-button bg-[#f4b5b5] text-black ml-8 py-2 px-4 rounded">
               Belanja Sekarang
-            </button>
+            </Link>
           </div>
           <div className="image-section ml-auto">
             <img

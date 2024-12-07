@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/KategoriCard"; // Pastikan path ini benar
+import PopularCard from "../components/PopularCard";
 import productData from "../services/ProductData";
 import { useParams } from "react-router-dom"; // Untuk mengambil params dari URL
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const ProductDetail = () => {
   const { id } = useParams(); // Mengambil id produk dari URL
@@ -13,9 +15,16 @@ const ProductDetail = () => {
 
   useEffect(() => {
     // Filter produk berdasarkan kategori 'Pakaian' dan tampilkan hanya 4 produk
-    const pakaianProducts = productData.filter((product) => product.category === "Pakaian").slice(0, 4);
+    const pakaianProducts = productData.filter((product) => product.category === "pakaian").slice(0, 4);
     setCategoryProducts(pakaianProducts);
   }, []);
+
+  const product = productData.find((product) => product.id === parseInt(id));
+  if (product) {
+    setMainImage("/assets/images/${product.img}");
+  } else {
+    console.error("Produk tidak ditemukan.");
+  }
 
   const changeImage = (e) => {
     setMainImage(e.target.src);
@@ -40,7 +49,7 @@ const ProductDetail = () => {
       <Header />
 
       {/* Subheader */}
-      <div className="container mx-auto flex items-center py-4 px-6 border-b border-black">
+      <div className="container mt-24 mx-auto flex items-center py-4 px-6 border-b border-black">
         <i className="fas fa-shopping-bag text-2xl mr-2"></i>
         <span className="text-xl font-bold">Membeli</span>
       </div>
@@ -50,13 +59,13 @@ const ProductDetail = () => {
         <div className="flex space-x-8">
           {/* Product Image and Thumbnails */}
           <div className="w-1/2">
-            <img id="mainImage" alt="Blouse Batik Kekinian" className="w-full h-auto" height="600" src={mainImage} />
+            <img id="mainImage" alt="Blouse Batik Kekinian" className="w-[500px] h-[500px]" height="600" src={mainImage} />
             <div className="flex space-x-2 mt-4">
-              <img onClick={changeImage} alt="Thumbnail 1" className="w-20 h-20 cursor-pointer" src="/assets/images/P_BLOUSEBIRU.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 2" className="w-20 h-20 cursor-pointer" src="/assets/images/atasan1.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 3" className="w-20 h-20 cursor-pointer" src="/assets/images/atasan2.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 4" className="w-20 h-20 cursor-pointer" src="/assets/images/atasan3.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 5" className="w-20 h-20 cursor-pointer" src="/assets/images/P_BIRUDONGKER.jpeg" />
+              <img onClick={changeImage} alt="Thumbnail 1" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/P_BLOUSEBIRU.jpeg" />
+              <img onClick={changeImage} alt="Thumbnail 2" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/atasan1.jpeg" />
+              <img onClick={changeImage} alt="Thumbnail 3" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/atasan2.jpeg" />
+              <img onClick={changeImage} alt="Thumbnail 4" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/atasan3.jpeg" />
+              <img onClick={changeImage} alt="Thumbnail 5" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/P_BIRUDONGKER.jpeg" />
             </div>
           </div>
 
@@ -251,7 +260,7 @@ const ProductDetail = () => {
           <div className="flex space-x-4 mt-4">
             {/* Product Card */}
             <section className="w-4/1">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-4 gap-20">
                 {categoryProducts.map((product, index) => (
                   <Card key={index} {...product} />
                 ))}
@@ -260,6 +269,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

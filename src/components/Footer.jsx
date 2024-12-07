@@ -24,7 +24,7 @@ const Footer = () => {
           <h4 className="text-sm font-bold mb-2">Menu Utama</h4>
           <ul>
             <li>
-              <Link to="/terpopular" className="text-sm hover:underline">
+              <Link to="/terbaru" className="text-sm hover:underline">
                 Produk Terbaru
               </Link>
             </li>
@@ -66,9 +66,9 @@ const Footer = () => {
           <h4 className="text-sm font-bold mb-2">Pengaturan</h4>
           <ul>
             <li>
-              <a href="#" className="text-sm hover:underline">
+              <Link to="/profile" className="text-sm hover:underline">
                 Pengaturan Akun
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/loyalitas" className="text-sm hover:underline">

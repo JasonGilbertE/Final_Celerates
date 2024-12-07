@@ -40,9 +40,9 @@ const ProductData = [
     isNew: true,
   },
   {
-    id: "01005",
+    id: "",
     category: "kerajinan",
-    img: "/assets/images/wayangsemar.jpeg",
+    img: "public/assets/images/wayangsemar.jpeg",
     alt: "Wayang Semar Buatan Tangan",
     title: "Wayang Semar Buatan Tangan",
     price: "Rp. 170.000",
@@ -101,7 +101,7 @@ const ProductData = [
   {
     id: "01011",
     category: "kerajinan",
-    img: "/assets/images/Kotakkayutempattishu.jpeg",
+    img: "public/assets/images/Kotakkayutempattishu.jpeg",
     alt: "Kotak tisu ukiran kayu asli Jepara",
     title: "Kotak tisu ukiran kayu asli Jepara",
     price: "Rp. 55.000",
@@ -110,7 +110,7 @@ const ProductData = [
   {
     id: "01012",
     category: "kerajinan",
-    img: "/assets/images/BatiktulisPekalongan_Privatecollection_.jpeg",
+    img: "public/assets/images/BatiktulisPekalongan_Privatecollection_.jpeg",
     alt: "Kain batik tulis Pekalongan",
     title: "Kain batik tulis Pekalongan",
     price: "Rp. 450.000",
@@ -119,7 +119,7 @@ const ProductData = [
   {
     id: "01013",
     category: "kerajinan",
-    img: "/assets/images/potrotan.jpeg",
+    img: "public/assets/images/potrotan.jpeg",
     alt: "Pot anyaman rotan handmade",
     title: "pot anyaman rotan handmade",
     price: "Rp. 55.000",
@@ -128,7 +128,7 @@ const ProductData = [
   {
     id: "01014",
     category: "kerajinan",
-    img: "/assets/images/Kotakkayutempattishu.jpeg",
+    img: "public/assets/images/Kotakkayutempattishu.jpeg",
     alt: "Ulekan/Cobek batu asli",
     title: "Ulekan/Cobek batu asli",
     price: "Rp. 80.000",
@@ -137,7 +137,7 @@ const ProductData = [
   {
     id: "01015",
     category: "kerajinan",
-    img: "/assets/images/kacarotan.jpeg",
+    img: "public/assets/images/kacarotan.jpeg",
     alt: "Cermin dengan bingkai anyaman rotan",
     title: "Cermin dengan bingkai anyaman rotan",
     price: "Rp. 75.000",
@@ -146,7 +146,7 @@ const ProductData = [
   {
     id: "01016",
     category: "kerajinan",
-    img: "/assets/images/kaintenuntroso.jpeg",
+    img: "public/assets/images/kaintenuntroso.jpeg",
     alt: "Kain tenun troso Jepara",
     title: "Kain tenun troso Jepara",
     price: "Rp. 105.000",
@@ -155,7 +155,7 @@ const ProductData = [
   {
     id: "01017",
     category: "kerajinan",
-    img: "/assets/images/ganciSolo.jpg",
+    img: "public/assets/images/ganciSolo.jpg",
     alt: "Gantungan kunci khas kota Solo",
     title: "Gantungan kunci khas kota Solo",
     price: "Rp. 4.000",
@@ -164,7 +164,7 @@ const ProductData = [
   {
     id: "01018",
     category: "kerajinan",
-    img: "/assets/images/topengbatik.jpg",
+    img: "public/assets/images/topengbatik.jpg",
     alt: "Gantungan kunci topeng batik",
     title: "Gantungan kunci topeng batik",
     price: "Rp. 10.000",
@@ -173,7 +173,7 @@ const ProductData = [
   {
     id: "01019",
     category: "kerajinan",
-    img: "/assets/images/wayangmini.jpg",
+    img: "public/assets/images/wayangmini.jpg",
     alt: "Wayang kulit mini",
     title: "Wayang kulit mini",
     price: "Rp. 25.000",
@@ -182,7 +182,7 @@ const ProductData = [
   {
     id: "01020",
     category: "kerajinan",
-    img: "/assets/images/magnetDieng.jpg",
+    img: "public/assets/images/magnetDieng.jpg",
     alt: "Magnet kulkas Dieng Jawa Tengah",
     title: "Magnet kulkas Dieng Jawa Tengah",
     price: "Rp. 15.000",
@@ -191,7 +191,7 @@ const ProductData = [
   {
     id: "01021",
     category: "kerajinan",
-    img: "/assets/images/magnetborobudur.jpg",
+    img: "public/assets/images/magnetborobudur.jpg",
     alt: "Magnet kulkas Borobudur",
     title: "Magnet kulkas Borobudur",
     price: "Rp. 15.000",
@@ -200,7 +200,7 @@ const ProductData = [
   {
     id: "01022",
     category: "kerajinan",
-    img: "/assets/images/MiniaturStupaCandiBorobudur.jpeg",
+    img: "public/assets/images/MiniaturStupaCandiBorobudur.jpeg",
     alt: "Miniatur stupa candi Borobudur",
     title: "Miniatur stupa candi Borobudur",
     price: "Rp. 25.000",
@@ -209,18 +209,64 @@ const ProductData = [
   {
     id: "01023",
     category: "kerajinan",
-    img: "/assets/images/blangkon.jpeg",
+    img: "public/assets/images/blangkon.jpeg",
     alt: "Blangkon Solo murah",
     title: "Blangkon Solo murah",
     price: "Rp. 35.000",
     rating: 5,
   },
-
-  // Makanan
+  {
+    id: "01024",
+    category: "kerajinan",
+    img: "public/assets/images/rotantas.png",
+    alt: "Tas Eceng Gondok Anyaman Rotan",
+    title: "Tas Eceng Gondok Anyaman Rotan",
+    price: "Rp. 65.000",
+    rating: 5,
+    isNew: true,
+  },
+  {
+    id: "01025",
+    category: "kerajinan",
+    alt: "Kain Lurik",
+    price: "Rp. 250.000",
+    img: "public/assets/images/handuk.png",
+    title: "Kain Lurik",
+    rating: 3,
+  },
+  {
+    id: "01026",
+    category: "kerajinan",
+    alt: "Teko Set Tempurung Kelapa",
+    price: "Rp. 17.000",
+    img: "public/assets/images/teko.png",
+    title: "Teko Set Dari Tempurung Kelapa",
+    rating: 3,
+  },
+  {
+    id: "01027",
+    category: "kerajinan",
+    alt: "Kerajinan Gerabah",
+    price: "Rp. 100.000",
+    img: "public/assets/images/claypot.png",
+    title: "Kerajinan Gerabah",
+    rating: 3,
+    isNew: true,
+  },
+  {
+    id: "01028",
+    category: "kerajinan",
+    alt: "Ukiran Tembaga",
+    price: "Rp. 250.000",
+    img: "public/assets/images/tembagakuning.png",
+    title: "Kerajinan Ukiran Tembaga dan Kuningan",
+    rating: 3,
+    isNew: true,
+  }, // Makanan
   {
     id: "02001",
     category: "makanan",
-    img: "/assets/images/M_gethuk.jpg",
+    img: "public/assets/images/M_gethuk.jpg",
     alt: "Gethuk khas Jawa Tengah",
     title: "Gethuk khas Jawa Tengah",
     price: "Rp. 3.000",
@@ -230,7 +276,7 @@ const ProductData = [
   {
     id: "02002",
     category: "makanan",
-    img: "/assets/images/M_onde2Jawa.jpeg",
+    img: "public/assets/images/M_onde2Jawa.jpeg",
     alt: "Onde-onde khas Jawa Tengah (per pcs)",
     title: "Onde-onde khas Jawa Tengah (per pcs)",
     price: "Rp. 3.500",
@@ -240,7 +286,7 @@ const ProductData = [
   {
     id: "02003",
     category: "makanan",
-    img: "/assets/images/M_ Wajik.jpeg",
+    img: "public/assets/images/M_ Wajik.jpeg",
     alt: "Wajik khas Jawa Tengah (per pcs)",
     title: "Wajik khas Jawa Tengah (per pcs)",
     price: "Rp. 2.500",
@@ -250,7 +296,7 @@ const ProductData = [
   {
     id: "02004",
     category: "makanan",
-    img: "/assets/images/M_lumpiaSemarang.jpeg",
+    img: "public/assets/images/M_lumpiaSemarang.jpeg",
     alt: "Lumpia asli Semarang (per pcs)",
     title: "Lumpia asli Semarang (per pcs)",
     price: "Rp. 10.000",
@@ -260,7 +306,7 @@ const ProductData = [
   {
     id: "02005",
     category: "makanan",
-    img: "/assets/images/M_wingkoBabat.jpeg",
+    img: "public/assets/images/M_wingkoBabat.jpeg",
     alt: "Wingko babat asli Jawa Tengah (per pcs)",
     title: "Wingko babat asli Jawa Tengah (per pcs)",
     price: "Rp. 7.000",
@@ -270,7 +316,7 @@ const ProductData = [
   {
     id: "02006",
     category: "makanan",
-    img: "/assets/images/M_serabiSolo.jpeg",
+    img: "public/assets/images/M_serabiSolo.jpeg",
     alt: "Serabi Solo (per pcs)",
     title: "Serabi Solo (per pcs)",
     price: "Rp. 3.500",
@@ -280,7 +326,7 @@ const ProductData = [
   {
     id: "02007",
     category: "makanan",
-    img: "/assets/images/M_JenangMubarok.jpeg",
+    img: "public/assets/images/M_JenangMubarok.jpeg",
     alt: "Jenang Kudus Mubarok (per box)",
     title: "Jenang Kudus Mubarok (per box)",
     price: "Rp. 20.000",
@@ -290,7 +336,7 @@ const ProductData = [
   {
     id: "02008",
     category: "makanan",
-    img: "/assets/images/M_Rotiganjelrel.jpeg",
+    img: "public/assets/images/M_Rotiganjelrel.jpeg",
     alt: "Roti ganjel rel khas Semarang (per pcs)",
     title: "Roti ganjel rel khas Semarang (per pcs)",
     price: "Rp. 10.000",
@@ -300,7 +346,7 @@ const ProductData = [
   {
     id: "02009",
     category: "makanan",
-    img: "/assets/images/M_latopiategal.jpg",
+    img: "public/assets/images/M_latopiategal.jpg",
     alt: "Latopia Tegal Ny.LIAO (per box)",
     title: "Latopia Tegal Ny.LIAO (per box)",
     price: "Rp. 20.000",
@@ -310,7 +356,7 @@ const ProductData = [
   {
     id: "02010",
     category: "makanan",
-    img: "/assets/images/M_Bandengpresto.jpeg",
+    img: "public/assets/images/M_Bandengpresto.jpeg",
     alt: "Bandeng Juwara-Bandeng asap presto (1 dus isi 4 ekor)",
     title: "Bandeng Juwara-Bandeng asap presto (1 dus isi 4 ekor)",
     price: "Rp. 110.000",
@@ -319,7 +365,7 @@ const ProductData = [
   {
     id: "02011",
     category: "makanan",
-    img: "/assets/images/M_resep-lumpia-semarang-500x375.jpg",
+    img: "public/assets/images/M_resep-lumpia-semarang-500x375.jpg",
     alt: "Lumpia Asli Semarang (per box)",
     title: "Lumpia Asli Semarang (per box)",
     price: "Rp. 98.000",
@@ -328,7 +374,7 @@ const ProductData = [
   {
     id: "02012",
     category: "makanan",
-    img: "/assets/images/M_onde2Jawa.jpeg",
+    img: "public/assets/images/M_onde2Jawa.jpeg",
     alt: "Roti ganjel rel toko Oen, khas Semarang",
     title: "Roti ganjel rel toko Oen, khas Semarang",
     price: "Rp. 90.000",
@@ -337,7 +383,7 @@ const ProductData = [
   {
     id: "02013",
     category: "makanan",
-    img: "/assets/images/M_jenangKrasikan.jpg",
+    img: "public/assets/images/M_jenangKrasikan.jpg",
     alt: "Jenang krasikan isi 32",
     title: "Jenang krasikan isi 32",
     price: "Rp. 75.000",
@@ -346,7 +392,7 @@ const ProductData = [
   {
     id: "02014",
     category: "makanan",
-    img: "/assets/images/M_BapiakuBokisi20.jpg",
+    img: "public/assets/images/M_BapiakuBokisi20.jpg",
     alt: "BakpiaKu (1 box isi 20 psc)",
     title: "BakpiaKu (1 box isi 20 psc)",
     price: "Rp. 72.000",
@@ -355,7 +401,7 @@ const ProductData = [
   {
     id: "02015",
     category: "makanan",
-    img: "/assets/images/M_BakpiaKemusuk.jpg",
+    img: "public/assets/images/M_BakpiaKemusuk.jpg",
     alt: "Bakpia kemusuk 033 (isi 20 pcs)",
     title: "Bakpia kemusuk 033 (isi 20 pcs)",
     price: "Rp. 62.000",
@@ -364,7 +410,7 @@ const ProductData = [
   {
     id: "02016",
     category: "makanan",
-    img: "/assets/images/M_Yangko_Kacang_dan_Aneka_Rasa_145_Oleh_oleh_Khas_Jogja.jpg",
+    img: "public/assets/images/M_Yangko_Kacang_dan_Aneka_Rasa_145_Oleh_oleh_Khas_Jogja.jpg",
     alt: "Wingko wae (1 box isi 10 pcs)",
     title: "Wingko wae (1 box isi 10 pcs)",
     price: "Rp. 55.000",
@@ -373,7 +419,7 @@ const ProductData = [
   {
     id: "02017",
     category: "makanan",
-    img: "/assets/images/M_RotiGanjelRelToko.jpg",
+    img: "public/assets/images/M_RotiGanjelRelToko.jpg",
     alt: "Roti ganjel rel toko Oen, khas Semarang",
     title: "Roti ganjel rel toko Oen, khas Semarang",
     price: "Rp. 90.000",
@@ -382,7 +428,7 @@ const ProductData = [
   {
     id: "02018",
     category: "makanan",
-    img: "/assets/images/M_Wajikwekk.jpg",
+    img: "public/assets/images/M_Wajikwekk.jpg",
     alt: "Wajik wekk khas Magelang",
     title: "Wajik wekk khas Magelang",
     price: "Rp. 45.000",
@@ -391,7 +437,7 @@ const ProductData = [
   {
     id: "02019",
     category: "makanan",
-    img: "/assets/images/M_klengkam.png",
+    img: "public/assets/images/M_klengkam.png",
     alt: "Klengkam kering kentang Kangensolo",
     title: "Klangkeng kering kentang Kangensolo",
     price: "Rp. 30.000",
@@ -400,7 +446,7 @@ const ProductData = [
   {
     id: "02020",
     category: "makanan",
-    img: "/assets/images/M_JenangKudus.jpg",
+    img: "public/assets/images/M_JenangKudus.jpg",
     alt: "Jenang Kudus semar tiga tiga",
     title: "Jenang Kudus semar tiga tiga",
     price: "Rp. 12.000",
@@ -409,14 +455,22 @@ const ProductData = [
   {
     id: "02021",
     category: "makanan",
-    img: "/assets/images/M_KerupukKarpet.jpg",
+    img: "public/assets/images/M_KerupukKarpet.jpg",
     alt: "Kerupuk carpet cap Raden khas Pekalongan",
     title: "Kerupuk carpet cap Raden khas Pekalongan",
     price: "Rp. 8.000",
     rating: 4,
   },
-
-  // Pakaian
+  {
+    id: "02022",
+    category: "makanan",
+    img: "public/assets/images/telorasin.png",
+    alt: "Telor asin (per butir)",
+    title: "Serabi asin (per butir)",
+    price: "Rp. 5/000",
+    rating: 5,
+    isNew: true,
+  }, // Pakaian
   {
     id: "03001",
     category: "pakaian",
@@ -460,7 +514,7 @@ const ProductData = [
   {
     id: "03005",
     category: "pakaian",
-    img: "/assets/images/P_BAJULURIK.jpg",
+    img: "public/assets/images/P_BAJULURIK.jpg",
     alt: "Baju surjan/lurik",
     title: "Baju surjan/lurik",
     price: "Rp. 170.000",
@@ -470,7 +524,7 @@ const ProductData = [
   {
     id: "03006",
     category: "pakaian",
-    img: "/assets/images/P_KEBAWAJADUL.jpeg",
+    img: "public/assets/images/P_KEBAWAJADUL.jpeg",
     alt: "Satu set baju kebaya jadul",
     title: "Satu set baju kebaya jadul",
     price: "Rp. 400.000",
@@ -480,7 +534,7 @@ const ProductData = [
   {
     id: "03007",
     category: "pakaian",
-    img: "/assets/images/P_BATIKORIGINAL.jpeg",
+    img: "public/assets/images/P_BATIKORIGINAL.jpeg",
     alt: "Baju batik wanita original",
     title: "Baju batik wanita original",
     price: "Rp. 300.000",
@@ -490,7 +544,7 @@ const ProductData = [
   {
     id: "03008",
     category: "pakaian",
-    img: "/assets/images/P_BLOUSEBIRU.jpeg",
+    img: "public/assets/images/P_BLOUSEBIRU.jpeg",
     alt: "Blouse batik kekinian",
     title: "Blouse batik kekinian",
     price: "Rp. 290.000",
@@ -501,7 +555,7 @@ const ProductData = [
   {
     id: "03009",
     category: "pakaian",
-    img: "/assets/images/P_NonararaBatik.jpeg",
+    img: "public/assets/images/P_NonararaBatik.jpeg",
     alt: "Nonarara batik",
     title: "Nonarara batik",
     price: "Rp. 250.000",
@@ -511,7 +565,7 @@ const ProductData = [
   {
     id: "03010",
     category: "pakaian",
-    img: "/assets/images/P_BATIKPUTIHSLIMFIT.jpeg",
+    img: "public/assets/images/P_BATIKPUTIHSLIMFIT.jpeg",
     alt: "Kemeja batik pria slimfit lengan pendek",
     title: "Kemeja batik pria slimfit lengan pendek",
     price: "Rp. 300.000",
@@ -520,7 +574,7 @@ const ProductData = [
   {
     id: "03011",
     category: "pakaian",
-    img: "/assets/images/P_KEMEJABATIKFURING.jpg",
+    img: "public/assets/images/P_KEMEJABATIKFURING.jpg",
     alt: "Kemeja batik pria lengan panjang slimfit Premium (hitan dengan furing)",
     title: "Kemeja batik pria lengan panjang slimfit Premium (hitan dengan furing)",
     price: "Rp. 370.000",
@@ -529,7 +583,7 @@ const ProductData = [
   {
     id: "03012",
     category: "pakaian",
-    img: "/assets/images/P_KEMEJATIDAKFURING.jpg",
+    img: "public/assets/images/P_KEMEJATIDAKFURING.jpg",
     alt: "Kemeja batik pria lengan panjang slimfit Premium (hitan abu)",
     title: "Kemeja batik pria lengan panjang slimfit Premium (hitan abu)",
     price: "Rp. 380.000",
@@ -538,7 +592,7 @@ const ProductData = [
   {
     id: "03013",
     category: "pakaian",
-    img: "/assets/images/P_coklatnuda.jpg",
+    img: "public/assets/images/P_coklatnuda.jpg",
     alt: "Baju batik Nowela series",
     title: "Baju batik Nowela series",
     price: "Rp. 440.000",
@@ -547,7 +601,7 @@ const ProductData = [
   {
     id: "03014",
     category: "pakaian",
-    img: "/assets/images/P_BATIKKERJA.jpg",
+    img: "public/assets/images/P_BATIKKERJA.jpg",
     alt: "Model baju batik untuk dipake kerja",
     title: "Model baju batik untuk dipake kerja",
     price: "Rp. 440.000",
@@ -556,7 +610,7 @@ const ProductData = [
   {
     id: "03015",
     category: "pakaian",
-    img: "/assets/images/P_GAMISOREN.jpg",
+    img: "public/assets/images/P_GAMISOREN.jpg",
     alt: "Model batik gamis Diana series",
     title: "Model batik gamis Diana series",
     price: "Rp. 500.000",
@@ -565,7 +619,7 @@ const ProductData = [
   {
     id: "03016",
     category: "pakaian",
-    img: "/assets/images/P_BATIKUNGU.jpg",
+    img: "public/assets/images/P_BATIKUNGU.jpg",
     alt: "Baju batik new Queen lengan pendek",
     title: "Baju batik new Queen lengan pendek",
     price: "Rp. 420.000",
@@ -574,7 +628,7 @@ const ProductData = [
   {
     id: "03017",
     category: "pakaian",
-    img: "/assets/images/P_SATUSETSURJANLURIK.jpg",
+    img: "public/assets/images/P_SATUSETSURJANLURIK.jpg",
     alt: "Satu set baju adat Jawa Tengah-Surjan Lurik",
     title: "Satu set baju adat Jawa Tengah-Surjan Lurik",
     price: "Rp. 300.000",
@@ -583,7 +637,7 @@ const ProductData = [
   {
     id: "03018",
     category: "pakaian",
-    img: "/assets/images/P_BATIKDRESSYUKA.jpg",
+    img: "public/assets/images/P_BATIKDRESSYUKA.jpg",
     alt: "Satu set dress batik Yuka (atasan dan rok lilit)",
     title: "Satu set dress batik Yuka (atasan dan rok lilit)",
     price: "Rp. 600.000",
@@ -592,7 +646,7 @@ const ProductData = [
   {
     id: "03019",
     category: "pakaian",
-    img: "/assets/images/P_CELANABATIK.jpeg",
+    img: "public/assets/images/P_CELANABATIK.jpeg",
     alt: "Celana motif batik",
     title: "Celana motif batik",
     price: "Rp. 35.000",
@@ -601,7 +655,7 @@ const ProductData = [
   {
     id: "03020",
     category: "pakaian",
-    img: "/assets/images/P_ILOVESOLO.jpg",
+    img: "public/assets/images/P_ILOVESOLO.jpg",
     alt: "Kaos I Love Solo",
     title: "Kaos I Love Solo",
     price: "Rp. 55.000",
@@ -610,7 +664,7 @@ const ProductData = [
   {
     id: "03021",
     category: "pakaian",
-    img: "/assets/images/P_KAOSMAGELANG.jpg",
+    img: "public/assets/images/P_KAOSMAGELANG.jpg",
     alt: "Kaos khas Magelang",
     title: "Kaos khas Magelang",
     price: "Rp. 60.000",
@@ -619,7 +673,7 @@ const ProductData = [
   {
     id: "03022",
     category: "pakaian",
-    img: "/assets/images/P_KAOSMERAH.jpg",
+    img: "public/assets/images/P_KAOSMERAH.jpg",
     alt: "Kaos Jogja premium",
     title: "Kaos Jogja premium",
     price: "Rp. 50.000",
@@ -628,7 +682,7 @@ const ProductData = [
   {
     id: "03023",
     category: "pakaian",
-    img: "/assets/images/P_BAJULURIKATAS.jpg",
+    img: "public/assets/images/P_BAJULURIKATAS.jpg",
     alt: "Baju lurik Jawa model terbaru",
     title: "Baju lurik Jawa model terbaru",
     price: "Rp. 180.000",
@@ -637,7 +691,7 @@ const ProductData = [
   {
     id: "03024",
     category: "pakaian",
-    img: "/assets/images/P_BAJUADATANAKC.jpg",
+    img: "public/assets/images/P_BAJUADATANAKC.jpg",
     alt: "Satu set baju adat Jawa Tengah",
     title: "Satu set baju adat Jawa Tengah",
     price: "Rp. 200.000",
@@ -646,7 +700,7 @@ const ProductData = [
   {
     id: "03025",
     category: "pakaian",
-    img: "/assets/images/P_LURIKANAK.jpeg",
+    img: "public/assets/images/P_LURIKANAK.jpeg",
     alt: "Satu set baju adat Jawa Tengah",
     title: "Satu set baju adat Jawa Tengah",
     price: "Rp. 75.000",
@@ -655,7 +709,7 @@ const ProductData = [
   {
     id: "03026",
     category: "pakaian",
-    img: "/assets/images/P_KAOSDISTROJOGJA.jpeg",
+    img: "public/assets/images/P_KAOSDISTROJOGJA.jpeg",
     alt: "Kaos distro Jogja Istimewa",
     title: "Kaos distro Jogja Istimewa",
     price: "Rp. 50.000",
@@ -664,12 +718,20 @@ const ProductData = [
   {
     id: "03027",
     category: "pakaian",
-    img: "/assets/images/P_KAOSPUTIH.jpg",
+    img: "public/assets/images/P_KAOSPUTIH.jpg",
     alt: "Kaos Jogja model & desain terbaru",
     title: "Kaos Jogja model & desain terbaru",
     price: "Rp. 80.000",
     rating: 4,
   },
+  {
+    id: "03028",
+    category: "pakaian",
+    img: "public/assets/images/batikcewe.png",
+    alt: "Batik Cardigan",
+    price: "Rp. 17.000",
+    title: "Batik Cardigan",
+    rating: 5,
+  },
 ];
-
 export default ProductData;
