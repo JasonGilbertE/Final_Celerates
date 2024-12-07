@@ -12,17 +12,29 @@ const Loyalitas = () => {
     { id: 6, text: "KLAIM", isDisabled: false, buttonColor: "#C62E2E", color: "white", voucher: "", minPrice: 100000 }
   ]);
 
+  const voucherList = {
+    DISKON10: { discountPercentage: 10, maxDiscount: 10000 },
+    HEMAT20: { discountPercentage: 20, maxDiscount: 20000 },
+    BELANJA30: { discountPercentage: 15, maxDiscount: 15000 },
+    POTONGAN50: { discountPercentage: 50, maxDiscount: 50000 },
+    SALE25: { discountPercentage: 25, maxDiscount: 25000 },
+    HAPPYSHOP: { discountPercentage: 30, maxDiscount: 30000 }
+  };
+
   const showCode = (id) => {
+    const voucherCodes = Object.keys(voucherList);
+    const randomVoucher = voucherCodes[Math.floor(Math.random() * voucherCodes.length)];
+    
     setButtons((prevButtons) =>
       prevButtons.map((button) =>
         button.id === id
           ? {
               ...button,
-              text: "VOUCHER123",
+              text: randomVoucher,
               isDisabled: true,
               buttonColor: "#FFFFFF",
               color: "black",
-              voucher: "VOUCHER123"
+              voucher: randomVoucher
             }
           : button
       )
@@ -88,6 +100,8 @@ const Loyalitas = () => {
                 >
                   {button.text}
                 </button>
+
+                {/* Salin kode jika voucher tersedia */}
                 {button.voucher && (
                   <button
                     onClick={() => copyToClipboard(button.voucher)}
