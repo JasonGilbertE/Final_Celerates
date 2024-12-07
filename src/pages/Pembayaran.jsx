@@ -21,25 +21,30 @@ const Pembayaran = () => {
   const totalBeforeDiscount = totalBelanja + biayaOngkosKirim + biayaAdmin;
 
   const voucherList = {
-    DISKON10: { discountPercentage: 10, maxDiscount: 10000 },
-    HEMAT20: { discountPercentage: 20, maxDiscount: 20000 },
-    BELANJA30: { discountPercentage: 15, maxDiscount: 15000 },
-    POTONGAN50: { discountPercentage: 50, maxDiscount: 50000 },
-    SALE25: { discountPercentage: 25, maxDiscount: 25000 },
-    HAPPYSHOP: { discountPercentage: 30, maxDiscount: 30000 },
+    DISKON10: { discountPercentage: 10, maxDiscount: 10000, minPurchase: 40000 },
+    HEMAT20: { discountPercentage: 20, maxDiscount: 20000, minPurchase: 50000 },
+    BELANJA30: { discountPercentage: 15, maxDiscount: 15000, minPurchase: 60000 },
+    POTONGAN50: { discountPercentage: 50, maxDiscount: 50000, minPurchase: 70000 },
+    SALE25: { discountPercentage: 25, maxDiscount: 25000, minPurchase: 80000 },
+    HAPPYSHOP: { discountPercentage: 30, maxDiscount: 30000, minPurchase: 100000 },
   };
 
   const applyVoucher = () => {
     if (voucherCode in voucherList) {
       const voucher = voucherList[voucherCode];
-      if (voucher.discountPercentage) {
-        const calculatedDiscount = Math.min(
-          (totalBelanja * voucher.discountPercentage) / 100,
-          voucher.maxDiscount
-        );
-        setDiscount(calculatedDiscount);
-      } else if (voucher.discountValue) {
-        setDiscount(voucher.discountValue);
+      if (totalBelanja >= voucher.minPurchase) {
+        if (voucher.discountPercentage) {
+          const calculatedDiscount = Math.min(
+            (totalBelanja * voucher.discountPercentage) / 100,
+            voucher.maxDiscount
+          );
+          setDiscount(calculatedDiscount);
+        } else if (voucher.discountValue) {
+          setDiscount(voucher.discountValue);
+        }
+      } else {
+        alert(`Voucher ini memerlukan minimal belanja Rp. ${voucher.minPurchase.toLocaleString()}`);
+        setDiscount(0);
       }
     } else {
       alert("Kode voucher tidak valid!");
