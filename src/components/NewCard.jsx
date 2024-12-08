@@ -7,7 +7,7 @@ function NewCard() {
 
   // Filter data berdasarkan tab aktif
   const filteredProducts = productData.filter((product) => {
-    if (activeTab === "popular") return product.isPopular; // Filter untuk tab "Populer"
+    if (activeTab === "popular") return product.category === "popular"; // Filter untuk tab "Populer"
     if (activeTab === "pakaian") return product.category === "pakaian"; // Filter untuk tab "Pakaian"
     if (activeTab === "makanan") return product.category === "makanan"; // Filter untuk tab "Makanan"
     if (activeTab === "kerajinan") return product.category === "kerajinan"; // Filter untuk tab "Kerajinan"
@@ -28,8 +28,8 @@ function NewCard() {
       </div>
 
       {/* Tab Menu */}
-      <div className="category-tabs flex justify-center text-base sm:text-lg mb-5">
-        <ul className="tab-menu flex justify-between w-full max-w-4xl">
+      <div className="category-tabs flex justify-center text-base sm:text-lg mb-6">
+        <ul className="tab-menu flex justify-between w-full max-w-6xl">
           <li onClick={() => handleTabClick("popular")} className={`tab-item text-center cursor-pointer ${activeTab === "popular" ? "text-black border-b-4 border-black" : "text-gray-400"}`}>
             Populer
           </li>
@@ -46,7 +46,7 @@ function NewCard() {
       </div>
 
       {/* Produk Grid */}
-      <div className="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ml-10">
         {filteredProducts.map((product) => (
           <Link to={"/productdetail/${product.id}/"} className="block">
             <div key={product.id} className="product-card bg-white border-4 border-[#C62E2E] rounded-lg shadow-lg overflow-hidden relative w-[300px] h-[450px]">
@@ -62,7 +62,7 @@ function NewCard() {
                   </div>
                   <h6 className="text-lg font-semibold text-gray-800 mt-2">{product.title}</h6>
                 </div>
-                <div className="price-cart-row text-left mt-4">
+                <div className="price-cart-row text-left mt-8 mb-2">
                   <p className="pricez text-[#C62E2E] font-bold text-lg">{product.price}</p>
                 </div>
               </div>

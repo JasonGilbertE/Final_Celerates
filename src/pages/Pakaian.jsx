@@ -40,7 +40,7 @@ const Pakaian = () => {
   return (
     <main className="mt-10">
       <Header />
-      <div className="flex justify-between items-center mt-20 mb-4 p-6 relative">
+      <div className="flex justify-between items-center mt-20 p-6 relative">
         <h1 className="text-xl font-bold flex items-center">
           <i className="fas fa-gem mr-2"></i> Pakaian
         </h1>

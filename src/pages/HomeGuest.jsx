@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import DiscountCard from "../components/DiscountCard";
 import NewCard from "../components/NewCard";
@@ -14,18 +15,19 @@ const HomeGuest = () => {
 
       <main className="">
         <section className="main-content flex items-center bg-[#C62E2E] pb-8 mt-8 relative">
-          <div className="welcome-text max-w-1/2">
+        <div className="welcome-text max-w-1/2">
             <h1 className="text-3xl text-white ml-8 mb-4">
-              SELAMAT DATANG DI <span className="font-bold">CENTRAL JAVA!</span>
+              SELAMAT DATANG DI <p> CENTRAL JAVA!</p>
             </h1>
             <p className="text-white ml-8 mb-4">
-              Temukan keunikan produk khas Jawa Tengah, dari batik, kerajinan tangan, hingga makanan tradisional. 
-              Setiap produk membawa keaslian budaya dan kualitas terbaik dari pengrajin lokal. 
-              Dukung produk lokal, rasakan autentiknya Jawa Tengah!
+              Temukan keunikan produk khas Jawa Tengah, dari batik, kerajinan{" "}
+              <p>tangan, hingga makanan tradisional. Setiap produk membawa keaslian </p>
+              <p>budaya dan kualitas terbaik dari pengrajin lokal. Dukung produk lokal,</p>
+              rasakan autentiknya Jawa Tengah!
             </p>
-            <button className="shop-button bg-[#f4b5b5] text-black ml-8 py-2 px-4 rounded">
+            <Link to="/terpopular" className="shop-button bg-[#f4b5b5] text-black ml-8 py-2 px-4 rounded">
               Belanja Sekarang
-            </button>
+            </Link>
           </div>
           <div className="image-section ml-auto">
             <img

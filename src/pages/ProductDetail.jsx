@@ -57,16 +57,10 @@ const ProductDetail = () => {
       {/* Main Content */}
       <main className="container mx-auto py-8 px-6">
         <div className="flex space-x-8">
-          {/* Product Image and Thumbnails */}
+          {/* Product Image */}
           <div className="w-1/2">
             <img id="mainImage" alt="Blouse Batik Kekinian" className="w-[500px] h-[500px]" height="600" src={mainImage} />
-            <div className="flex space-x-2 mt-4">
-              <img onClick={changeImage} alt="Thumbnail 1" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/P_BLOUSEBIRU.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 2" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/atasan1.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 3" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/atasan2.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 4" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/atasan3.jpeg" />
-              <img onClick={changeImage} alt="Thumbnail 5" className="w-[90px] h-[90x] cursor-pointer" src="/assets/images/P_BIRUDONGKER.jpeg" />
-            </div>
+            
           </div>
 
           {/* Product Details */}

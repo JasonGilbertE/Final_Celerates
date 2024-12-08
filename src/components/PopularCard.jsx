@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import popularData from "../services/PopularData";
 
 function PopularCard() {
-  const [activeTab, setActiveTab] = useState("all"); // State untuk tab aktif
+  const [activeTab, setActiveTab] = useState("pakaian"); // State untuk tab aktif
 
   // Filter produk berdasarkan tab aktif
   const filteredProducts = popularData.filter((product) => {
@@ -41,7 +41,7 @@ function PopularCard() {
         </aside>
 
         {/* Grid Produk */}
-        <div className="products-populer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
+        <div className="products-populer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 flex-grow">
           {filteredProducts.map((product) => (
             <Link to={"/productdetail/{product.id}/"} className="block">
               <div key={product.id} className="card-populer bg-white border-4 border-[#C62E2E] rounded-lg shadow-lg overflow-hidden relative" style={{ width: "300px", height: "450px" }}>
@@ -57,7 +57,7 @@ function PopularCard() {
                     </div>
                     <h3 className="text-base font-semibold text-gray-800 mt-2">{product.title}</h3>
                   </div>
-                  <div className="price-cart-row text-left mb-8">
+                  <div className="price-cart-row text-left mb-4">
                     <p className="pricez text-[#C62E2E] font-bold text-lg">{product.price}</p>
                   </div>
                 </div>
