@@ -1,6 +1,6 @@
-# Tutorial Instalasi Aplikasi Central Java E-Commerce
+# Tutorial Instalasi Website Central Java E-Commerce
 
-Aplikasi ini terdiri dari tiga folder utama:
+Website E-Commerce ini terdiri dari tiga folder utama:
 1. frontend - Antarmuka pengguna yang dibangun dengan React.
 2. backend - API backend untuk menangani data dan logika aplikasi.
 3. sqlData - Berisi file SQL untuk menambahkan data item ke database.
@@ -79,4 +79,4 @@ Pastikan Anda sudah menginstal:
 
 ---
 
-Setelah semua langkah di atas selesai, aplikasi Central Java E-Commerce siap digunakan!
+Setelah semua langkah di atas selesai, website Central Java E-Commerce siap digunakan!
